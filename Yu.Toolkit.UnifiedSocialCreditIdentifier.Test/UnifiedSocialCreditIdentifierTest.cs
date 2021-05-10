@@ -1,18 +1,18 @@
-using System;
+ï»¿using System;
 using Xunit;
 
 namespace Yu.Toolkit.Test
 {
     public class UnifiedSocialCreditIdentifierTest
     {
-        [Fact(DisplayName = "Ğ£ÑéÂë²âÊÔ")]
+        [Fact(DisplayName = "æ ¡éªŒç æµ‹è¯•")]
         public void GetCheckCodeTest()
         {
             Assert.True(UnifiedSocialCreditIdentifier.GetCheckCode("91350100M000100Y4") == "3");
             Assert.True(UnifiedSocialCreditIdentifier.GetCheckCode("91350100M000100Y43") == "3");
         }
 
-        [Fact(DisplayName = "¼ì²â»ú¹¹´úÂë²âÊÔ")]
+        [Fact(DisplayName = "æ£€æµ‹æœºæ„ä»£ç æµ‹è¯•")]
         public void CheckOrganizationCodeTest()
         {
             Assert.Equal("Institution code does not exist", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.CheckOrganizationCode("96"); }).Message);
@@ -21,7 +21,7 @@ namespace Yu.Toolkit.Test
         }
 
 
-        [Fact(DisplayName = "ÑéÖ¤·ûºÏÊÇ·ñ¹æÔò²âÊÔ")]
+        [Fact(DisplayName = "éªŒè¯ç¬¦åˆæ˜¯å¦è§„åˆ™æµ‹è¯•")]
         public void VerificationTest()
         {
             Assert.Equal("Does not meet the regular rules", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.Verification("AbcDefjHjklmdnOpqr"); }).Message);

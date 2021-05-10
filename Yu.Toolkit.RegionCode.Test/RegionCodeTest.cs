@@ -3,46 +3,46 @@ using Xunit;
 
 namespace Yu.Toolkit.Test
 {
-    [Collection("ÇøÓò´úÂë²âÊÔ")]
+    [Collection("åŒºåŸŸä»£ç æµ‹è¯•")]
     public class RegionCodeTest
     {
-        [Fact(DisplayName = "µØÇø´úÂë¶ÁÈ¡Õı³£")]
+        [Fact(DisplayName = "åœ°åŒºä»£ç è¯»å–æ­£å¸¸")]
         public void RegionLoading()
         {
             Assert.True(RegionCode.Regions.Count > 0);
         }
-        [Fact(DisplayName = "Ê¡´úÂë²âÊÔ")]
+        [Fact(DisplayName = "çœä»£ç æµ‹è¯•")]
         public void ProvinceTest()
         {
             Assert.True(RegionCode.Provinces.Count > 0);
-            Assert.True("ºş±±Ê¡" == RegionCode.GetProvinceNameByCode("420000"));
-            Assert.True("420000" == RegionCode.GetProvinceCodeByName("ºş±±Ê¡"));
+            Assert.True("æ¹–åŒ—çœ" == RegionCode.GetProvinceNameByCode("420000"));
+            Assert.True("420000" == RegionCode.GetProvinceCodeByName("æ¹–åŒ—çœ"));
             Assert.True(string.IsNullOrEmpty(RegionCode.GetProvinceNameByCode("420100")));
             Assert.True(string.IsNullOrEmpty(RegionCode.GetProvinceNameByCode("420106")));
-            Assert.True(string.IsNullOrEmpty(RegionCode.GetProvinceCodeByName("ÎäººÊĞ")));
-            Assert.True(string.IsNullOrEmpty(RegionCode.GetProvinceCodeByName("Îä²ıÇø")));
+            Assert.True(string.IsNullOrEmpty(RegionCode.GetProvinceCodeByName("æ­¦æ±‰å¸‚")));
+            Assert.True(string.IsNullOrEmpty(RegionCode.GetProvinceCodeByName("æ­¦æ˜ŒåŒº")));
         }
-        [Fact(DisplayName = "ÊĞ´úÂë²âÊÔ")]
+        [Fact(DisplayName = "å¸‚ä»£ç æµ‹è¯•")]
         public void CityTest()
         {
             Assert.True(RegionCode.Cities.Count > 0);
-            Assert.True("ÎäººÊĞ" == RegionCode.GetCityNameByCode("420100"));
-            Assert.True("420100" == RegionCode.GetCityCodeByName("ÎäººÊĞ"));
+            Assert.True("æ­¦æ±‰å¸‚" == RegionCode.GetCityNameByCode("420100"));
+            Assert.True("420100" == RegionCode.GetCityCodeByName("æ­¦æ±‰å¸‚"));
             Assert.True(string.IsNullOrEmpty(RegionCode.GetCityNameByCode("420000")));
             Assert.True(string.IsNullOrEmpty(RegionCode.GetCityNameByCode("420106")));
-            Assert.True(string.IsNullOrEmpty(RegionCode.GetCityCodeByName("ºş±±Ê¡")));
-            Assert.True(string.IsNullOrEmpty(RegionCode.GetCityCodeByName("Îä²ıÇø")));
+            Assert.True(string.IsNullOrEmpty(RegionCode.GetCityCodeByName("æ¹–åŒ—çœ")));
+            Assert.True(string.IsNullOrEmpty(RegionCode.GetCityCodeByName("æ­¦æ˜ŒåŒº")));
         }
-        [Fact(DisplayName = "Çø´úÂë²âÊÔ")]
+        [Fact(DisplayName = "åŒºä»£ç æµ‹è¯•")]
         public void AreaTest()
         {
             Assert.True(RegionCode.Areas.Count > 0);
-            Assert.True("Îä²ıÇø" == RegionCode.GetAreaNameByCode("420106"));
-            Assert.True("420106" == RegionCode.GetAreaCodeByName("Îä²ıÇø"));
+            Assert.True("æ­¦æ˜ŒåŒº" == RegionCode.GetAreaNameByCode("420106"));
+            Assert.True("420106" == RegionCode.GetAreaCodeByName("æ­¦æ˜ŒåŒº"));
             Assert.True(string.IsNullOrEmpty(RegionCode.GetAreaNameByCode("420000")));
             Assert.True(string.IsNullOrEmpty(RegionCode.GetAreaNameByCode("420100")));
-            Assert.True(string.IsNullOrEmpty(RegionCode.GetAreaCodeByName("ºş±±Ê¡")));
-            Assert.True(string.IsNullOrEmpty(RegionCode.GetAreaCodeByName("ÎäººÊĞ")));
+            Assert.True(string.IsNullOrEmpty(RegionCode.GetAreaCodeByName("æ¹–åŒ—çœ")));
+            Assert.True(string.IsNullOrEmpty(RegionCode.GetAreaCodeByName("æ­¦æ±‰å¸‚")));
         }
 
     }

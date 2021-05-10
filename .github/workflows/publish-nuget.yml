@@ -21,4 +21,4 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: 发布包到nuget
         run: |
-          dotnet nuget push */bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key  ${{ secrets.NugetKey }}  --skip-duplicate
+          dotnet nuget push "*/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key  ${{ secrets.NugetKey }} 

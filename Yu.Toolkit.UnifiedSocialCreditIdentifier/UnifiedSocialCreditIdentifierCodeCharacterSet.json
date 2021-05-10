@@ -1,0 +1,126 @@
+[
+    {
+        "CharCode": "0",
+        "CharValue": 0
+    },
+    {
+        "CharCode": "1",
+        "CharValue": 1
+    },
+    {
+        "CharCode": "2",
+        "CharValue": 2
+    },
+    {
+        "CharCode": "3",
+        "CharValue": 3
+    },
+    {
+        "CharCode": "4",
+        "CharValue": 4
+    },
+    {
+        "CharCode": "5",
+        "CharValue": 5
+    },
+    {
+        "CharCode": "6",
+        "CharValue": 6
+    },
+    {
+        "CharCode": "7",
+        "CharValue": 7
+    },
+    {
+        "CharCode": "8",
+        "CharValue": 8
+    },
+    {
+        "CharCode": "9",
+        "CharValue": 9
+    },
+    {
+        "CharCode": "A",
+        "CharValue": 10
+    },
+    {
+        "CharCode": "B",
+        "CharValue": 11
+    },
+    {
+        "CharCode": "C",
+        "CharValue": 12
+    },
+    {
+        "CharCode": "D",
+        "CharValue": 13
+    },
+    {
+        "CharCode": "E",
+        "CharValue": 14
+    },
+    {
+        "CharCode": "F",
+        "CharValue": 15
+    },
+    {
+        "CharCode": "G",
+        "CharValue": 16
+    },
+    {
+        "CharCode": "H",
+        "CharValue": 17
+    },
+    {
+        "CharCode": "J",
+        "CharValue": 18
+    },
+    {
+        "CharCode": "K",
+        "CharValue": 19
+    },
+    {
+        "CharCode": "L",
+        "CharValue": 20
+    },
+    {
+        "CharCode": "M",
+        "CharValue": 21
+    },
+    {
+        "CharCode": "N",
+        "CharValue": 22
+    },
+    {
+        "CharCode": "P",
+        "CharValue": 23
+    },
+    {
+        "CharCode": "Q",
+        "CharValue": 24
+    },
+    {
+        "CharCode": "R",
+        "CharValue": 25
+    },
+    {
+        "CharCode": "T",
+        "CharValue": 26
+    },
+    {
+        "CharCode": "U",
+        "CharValue": 27
+    },
+    {
+        "CharCode": "W",
+        "CharValue": 28
+    },
+    {
+        "CharCode": "X",
+        "CharValue": 29
+    },
+    {
+        "CharCode": "Y",
+        "CharValue": 30
+    }
+]

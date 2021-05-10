@@ -42,10 +42,14 @@ namespace Yu.Toolkit
     /// </summary>
     public static class RegionCode
     {
+        /// <summary>
+        /// 地区代码Json文件的地址
+        /// </summary>
+        public static string RegionCodeJsonFilePath = "RegionCode.json";
 
         static List<RegionDto> _regions = null;
         static List<RegionDto> _provinces = null;
-        static List<RegionDto> _citys = null;
+        static List<RegionDto> _cities = null;
         static List<RegionDto> _areas = null;
         /// <summary>
         /// 地区
@@ -58,7 +62,7 @@ namespace Yu.Toolkit
         /// <summary>
         /// 城市
         /// </summary>
-        public static List<RegionDto> Citys => _citys ?? GetCitys();
+        public static List<RegionDto> Cities => _cities ?? GetCities();
         /// <summary>
         /// 区域
         /// </summary>
@@ -79,7 +83,7 @@ namespace Yu.Toolkit
             //     string code = Regex.Match(tr.Value, @"<td.*>([0-9]+)</td>")?.Groups[1]?.Value;
             //     _regions.Add(new RegionDto(code, name));
             // }  
-            var json = File.ReadAllText(@"RegionCode.json");
+            var json = File.ReadAllText(RegionCodeJsonFilePath);
             _regions = JsonConvert.DeserializeObject<List<RegionDto>>(json);
             return _regions;
         }
@@ -98,10 +102,10 @@ namespace Yu.Toolkit
         /// 获取城市
         /// </summary>
         /// <returns></returns>
-        static List<RegionDto> GetCitys()
+        static List<RegionDto> GetCities()
         {
-            _citys = Regions.Except(Provinces).Where(r => r.Code.EndsWith("00")).ToList();
-            return _citys;
+            _cities = Regions.Except(Provinces).Where(r => r.Code.EndsWith("00")).ToList();
+            return _cities;
         }
         /// <summary>   
         /// 获取区域
@@ -109,7 +113,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         static List<RegionDto> GetAreas()
         {
-            _areas = Regions.Except(Provinces).Except(Citys).ToList();
+            _areas = Regions.Except(Provinces).Except(Cities).ToList();
             return _areas;
         }
 
@@ -193,7 +197,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static RegionDto GetCityByCode(string code)
         {
-            return Citys.FirstOrDefault(r => r.Code == code);
+            return Cities.FirstOrDefault(r => r.Code == code);
         }
         /// <summary>
         /// 获取城市
@@ -202,7 +206,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static RegionDto GetCityByName(string name)
         {
-            return Citys.FirstOrDefault(r => r.Name == name);
+            return Cities.FirstOrDefault(r => r.Name == name);
         }
         /// <summary>
         /// 获取城市名称
@@ -264,9 +268,9 @@ namespace Yu.Toolkit
         /// </summary>
         /// <param name="code">地区代码</param>
         /// <returns></returns>
-        public static List<RegionDto> GetCitysByProvinceCode(string code)
+        public static List<RegionDto> GetCitiesByProvinceCode(string code)
         {
-            return Citys.Where(c => c.Code.StartsWith(code.Substring(0, 2))).ToList();
+            return Cities.Where(c => c.Code.StartsWith(code.Substring(0, 2))).ToList();
         }
         /// <summary>
         /// 获取区域

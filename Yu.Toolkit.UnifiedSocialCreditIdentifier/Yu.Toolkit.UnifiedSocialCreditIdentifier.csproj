@@ -4,21 +4,18 @@
     <TargetFramework>net5.0</TargetFramework>
     <Authors>linyisonger</Authors>
     <Product>Yu.Toolkit</Product>
-    <PackageIcon>juice.png</PackageIcon>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>Yu.Toolkit.RegionCode</PackageId>
-    <Description>Common region code package. For documentation, see github.</Description>
-    <NeutralLanguage></NeutralLanguage>
-    <PackageProjectUrl>https://github.com/linyisonger/Yu.Toolkit</PackageProjectUrl>
+    <Description>Unified social credit identification code generation and verification. For documentation, see github.</Description>
+    <Copyright>林一怂儿</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/linyisonger/Yu.Toolkit</PackageProjectUrl>
     <RepositoryUrl>https://github.com/linyisonger/Yu.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>1.The source of the area code http://www.mca.gov.cn/article/sj/xzqh/2020/;
-2.Some commonly used query methods.
-</PackageReleaseNotes>
-    <Summary>Common region code package.</Summary>
-    <Copyright>林一怂儿</Copyright>
+    <NeutralLanguage></NeutralLanguage>
+    <PackageIcon>juice.png</PackageIcon>
+    <PackageReleaseNotes>1. Guideline http://c.gb688.cn/bzgk/gb/showGb?type=online&amp;hcno=080D6FBF2BB468F9007657F26D60013E
+2. Generation and Verification.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
@@ -28,13 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="juice.png">
+    <None Update="UnifiedSocialCreditIdentifierCodeCharacterSet.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ReginCode.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="RegionCode.json">
+    <None Update="UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\juice.png">

@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Yu.Toolkit.CitizenIdentificationNumber\Yu.Toolkit.CitizenIdentificationNumber.csproj" />
     <ProjectReference Include="..\Yu.Toolkit.RegionCode\Yu.Toolkit.RegionCode.csproj" />
+    <ProjectReference Include="..\Yu.Toolkit.UnifiedSocialCreditIdentifier\Yu.Toolkit.UnifiedSocialCreditIdentifier.csproj" />
   </ItemGroup>
 
 </Project>

@@ -25,7 +25,7 @@ namespace Yu.Toolkit.Test
         [Fact(DisplayName = " –¥˙¬Î≤‚ ‘")]
         public void CityTest()
         {
-            Assert.True(RegionCode.Citys.Count > 0);
+            Assert.True(RegionCode.Cities.Count > 0);
             Assert.True("Œ‰∫∫ –" == RegionCode.GetCityNameByCode("420100"));
             Assert.True("420100" == RegionCode.GetCityCodeByName("Œ‰∫∫ –"));
             Assert.True(string.IsNullOrEmpty(RegionCode.GetCityNameByCode("420000")));

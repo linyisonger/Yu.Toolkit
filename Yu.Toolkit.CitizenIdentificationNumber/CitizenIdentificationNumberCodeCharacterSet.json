@@ -1,0 +1,46 @@
+[
+  {
+    "CharCode": "1",
+    "CharValue": 0
+  },
+  {
+    "CharCode": "0",
+    "CharValue": 1
+  },
+  {
+    "CharCode": "X",
+    "CharValue": 2
+  },
+  {
+    "CharCode": "9",
+    "CharValue": 3
+  },
+  {
+    "CharCode": "8",
+    "CharValue": 4
+  },
+  {
+    "CharCode": "7",
+    "CharValue": 5
+  },
+  {
+    "CharCode": "6",
+    "CharValue": 6
+  },
+  {
+    "CharCode": "5",
+    "CharValue": 7
+  },
+  {
+    "CharCode": "4",
+    "CharValue": 8
+  },
+  {
+    "CharCode": "3",
+    "CharValue": 9
+  },
+  {
+    "CharCode": "2",
+    "CharValue": 10
+  }
+]

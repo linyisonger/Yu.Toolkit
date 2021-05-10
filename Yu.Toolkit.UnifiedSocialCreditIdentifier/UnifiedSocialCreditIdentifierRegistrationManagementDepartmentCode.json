@@ -1,0 +1,212 @@
+[
+    {
+        "Code": "1",
+        "Name": "机构编制",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "机关"
+            },
+            {
+                "Code": "2",
+                "Name": "事业单位"
+            },
+            {
+                "Code": "3",
+                "Name": "编办直接管理机构编制的群众团体"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "2",
+        "Name": "外交",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "外国常驻新闻机构"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "3",
+        "Name": "司法行政",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "律师执业机构"
+            },
+            {
+                "Code": "2",
+                "Name": "公证处"
+            },
+            {
+                "Code": "3",
+                "Name": "基层法律服务所"
+            },
+            {
+                "Code": "4",
+                "Name": "司法鉴定机构"
+            },
+            {
+                "Code": "5",
+                "Name": "仲裁委员会"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "4",
+        "Name": "文化",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "外国在华文化中心"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "5",
+        "Name": "民政",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "社会团体"
+            },
+            {
+                "Code": "2",
+                "Name": "民办非企业单位"
+            },
+            {
+                "Code": "3",
+                "Name": "基金会"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "6",
+        "Name": "旅游",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "外国旅游部门常驻代表机构"
+            },
+            {
+                "Code": "2",
+                "Name": "港澳台地区旅游部门常驻内地(大陆)代表机构"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "7",
+        "Name": "宗教",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "宗教活动场所"
+            },
+            {
+                "Code": "2",
+                "Name": "宗教院校"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "8",
+        "Name": "工会",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "基层工会"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "9",
+        "Name": "工商",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "企业"
+            },
+            {
+                "Code": "2",
+                "Name": "个体工商户"
+            },
+            {
+                "Code": "3",
+                "Name": "农民专业合作社"
+            }
+        ]
+    },
+    {
+        "Code": "A",
+        "Name": "中央军委改革和编制办公室",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "军队事业单位"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "N",
+        "Name": "农业",
+        "OrganizationCodes": [
+            {
+                "Code": "1",
+                "Name": "组级集体经济组织"
+            },
+            {
+                "Code": "2",
+                "Name": "村级集体经济组织"
+            },
+            {
+                "Code": "3",
+                "Name": "乡镇级集体经济组织"
+            },
+            {
+                "Code": "9",
+                "Name": "其他"
+            }
+        ]
+    },
+    {
+        "Code": "Y",
+        "Name": "其他"
+    }
+]

@@ -2,23 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Authors>linyisonger</Authors>
-    <Product>Yu.Toolkit</Product>
-    <PackageIcon>juice.png</PackageIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>Yu.Toolkit.RegionCode</PackageId>
-    <Description>Common region code package. For documentation, see github.</Description>
-    <NeutralLanguage></NeutralLanguage>
-    <PackageProjectUrl>https://github.com/linyisonger/Yu.Toolkit</PackageProjectUrl>
+    <Authors>linyisonger</Authors>
+    <Company>linyisonger</Company>
+    <Product>Yu.Toolkit</Product>
+    <Description>Citizen identification number code generation and verification. For documentation, see github.</Description>
+    <Copyright>林一怂儿</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/linyisonger/Yu.Toolkit</PackageProjectUrl>
+    <PackageIcon>juice.png</PackageIcon>
     <RepositoryUrl>https://github.com/linyisonger/Yu.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>1.The source of the area code http://www.mca.gov.cn/article/sj/xzqh/2020/;
-2.Some commonly used query methods.
-</PackageReleaseNotes>
-    <Summary>Common region code package.</Summary>
-    <Copyright>林一怂儿</Copyright>
+    <PackageReleaseNotes>1. Guideline http://c.gb688.cn/bzgk/gb/showGb?type=online&amp;hcno=24691C25985C1073D3A7C85629378AC0
+2. Generation and Verification.</PackageReleaseNotes>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
@@ -28,13 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="juice.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="ReginCode.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="RegionCode.json">
+    <None Update="CitizenIdentificationNumberCodeCharacterSet.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\juice.png">
@@ -42,10 +33,18 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="..\juice.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 

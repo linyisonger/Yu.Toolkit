@@ -17,7 +17,7 @@ jobs:
         run: dotnet test
       - name: 还原包
         run: dotnet restore
-      - name: 部署
+      - name: 构建
         run: dotnet build --configuration Release --no-restore
       - name: 发布包到nuget
         run: |

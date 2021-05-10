@@ -14,8 +14,9 @@
     <PackageIcon>juice.png</PackageIcon>
     <RepositoryUrl>https://github.com/linyisonger/Yu.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>1. Guideline http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=080D6FBF2BB468F9007657F26D60013E
-2. Generation and Verification.</PackageReleaseNotes>
+    <PackageReleaseNotes>1. Guideline http://c.gb688.cn/bzgk/gb/showGb?type=online&amp;hcno=080D6FBF2BB468F9007657F26D60013E
+2. Generation and Verification.
+</PackageReleaseNotes>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
@@ -33,18 +34,10 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\juice.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 

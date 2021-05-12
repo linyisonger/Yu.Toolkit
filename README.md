@@ -1,14 +1,18 @@
-# Yu.Toolkit
+# Yu.Toolkit 工具包
 This is a small c sharp toolkit.
 
-## Yu.Toolkit.RegionCode
+一个简单的c#工具包
 
-- property
-  - Regions
-  - Provinces
-  - Cities
-  - Areas
-- method
+## Yu.Toolkit.RegionCode 行政区划代码
+
+> 行政区划代码 http://www.mca.gov.cn/article/sj/xzqh/2020/    
+
+- property 属性
+  - Regions 行政区划代码
+  - Provinces 省
+  - Cities 城市
+  - Areas 区域
+- method 方法
   - ```RegionDto GetRegionByCode(string code)```
   - ```RegionDto GetRegionByName(string name)```
   - ```string GetRegionNameByCode(string code)```
@@ -27,21 +31,36 @@ This is a small c sharp toolkit.
   - ```List<RegionDto> GetCitiesByProvinceCode(string code)```
   - ```List<RegionDto> GetAreasByCityCode(string code)``` 
 
-## Yu.Toolkit.UnifiedSocialCreditIdentifier
+## Yu.Toolkit.UnifiedSocialCreditIdentifier 社会统一信用代码校验与生成
 
-* property
-  * RegistrationManagementDepartmentCodeList
-* method
-  * ```string GetCheckCode(string str)```
-  * ``` void CheckOrganizationCode(string code)```
-  * ```string Gengenerate(string[] organizationCodes = null, string regionCode = "")```
-  * ```void Verification(string code)```
+> 社会统一信用代码 http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=24691C25985C1073D3A7C85629378AC0
 
-## Yu.Toolkit.CitizenIdentificationNumber
+* property 属性
+  * RegistrationManagementDepartmentCodeList 签发机构
+* method 方法
+  * ```string GetCheckCode(string str)``` 获取第十八位校验码
+  * ``` void CheckOrganizationCode(string code)``` 检测签发机构是否正确
+  * ```string Gengenerate(string[] organizationCodes = null, string regionCode = "")``` 生成社会统一信用代码
+  * ```void Verification(string code)``` 验证社会统一信用代码是否符合规范
 
-* method
-  * ```string GetCheckCode(string str)```
-  * ``` void CheckOrganizationCode(string code)```
-  * ```string Gengenerate(string regionCode = "", string dateBirth = "", CitizenIdentificationNumberGenderEnum gender = CitizenIdentificationNumberGenderEnum.Male | CitizenIdentificationNumberGenderEnum.Female)```
-  * ````void Verification(string code)```
+## Yu.Toolkit.CitizenIdentificationNumber 身份证号码校验与生成
+
+> 公民身份号码  http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=080D6FBF2BB468F9007657F26D60013E
+
+* method 方法
+  * ```string GetCheckCode(string str)``` 获取第十八位校验码
+  * ```string Gengenerate(string regionCode = "", string dateBirth = "", CitizenIdentificationNumberGenderEnum gender = CitizenIdentificationNumberGenderEnum.Male | CitizenIdentificationNumberGenderEnum.Female)``` 随机生成身份证号码
+  * ```void Verification(string code)``` 验证身份证号码是否符合规范
+
+## Yu.Toolkit.CitizenIdentificationImage 身份证图像生成
+
+* method 方法
+  * ```Bitmap GengenerateFront(string issuingAuthority, string validPeriod = "")``` 生成身份证正面
+  * ```Bitmap GengenerateBack(string name, string ethnic, string address, string citizenIdentificationNumber, Image avatarPhoto = null)``` 生成身份证反面
+
+* preview 预览
+  * ![](preview/身份证正面生成预览.png)
+  * ![](preview/身份证反面生成预览.png)
+
+
 

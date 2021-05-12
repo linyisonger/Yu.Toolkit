@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>juice.png</PackageIcon>
+    <RepositoryUrl>https://github.com/linyisonger/Yu.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/linyisonger/Yu.Toolkit</PackageProjectUrl>
+    <Copyright>林一怂儿</Copyright>
+    <Authors>linyisonger</Authors>
+    <Company>linyisonger</Company>
+    <Product>Yu.Toolkit</Product>
+    <Description>Generation citizen identification image.</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>1. Generation</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="CitizenIdentificationImageBackTemplateImage.jfif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="CitizenIdentificationImageFrontTemplateAvatarPhoto.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="CitizenIdentificationImageFrontTemplateImage.jfif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="OCR-B 10 BT.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\juice.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -53,7 +53,7 @@ namespace Yu.Toolkit
     {
 
         static readonly string _defalutRegionCode = "410783";
-        static readonly string _defalutDateBirth = "19970314";
+        static readonly string _defalutDateBirth = "19980101";
         /// <summary>
         /// 代码字符集配置文件地址
         /// </summary>
@@ -86,7 +86,6 @@ namespace Yu.Toolkit
             var sum = str.ToCharArray().Select((c, i) => int.Parse(c.ToString()) * Math.Pow(2, 17 - i) % 11).Sum();
             var cv = sum % 11;
             return CodeCharacterSetList.First(ccs => ccs.CharValue == cv)?.CharCode;
-
         }
 
         /// <summary>
@@ -106,6 +105,7 @@ namespace Yu.Toolkit
             int sequenceCode;
             bool hasMale = (gender & CitizenIdentificationNumberGenderEnum.Male).ToString() != "0";
             bool hasFemale = (gender & CitizenIdentificationNumberGenderEnum.Female).ToString() != "0";
+            // 奇数为
             do
                 sequenceCode = new Random().Next(1, 1000);
             while ((!hasMale && sequenceCode % 2 == 1) || (!hasFemale && sequenceCode % 2 == 0));

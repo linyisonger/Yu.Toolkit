@@ -87,7 +87,6 @@ namespace Yu.Toolkit
             _regions = JsonConvert.DeserializeObject<List<RegionDto>>(json);
             return _regions;
         }
-
         /// <summary>
         /// 获取省份或直辖市
         /// </summary>

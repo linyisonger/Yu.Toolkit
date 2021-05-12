@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.UnifiedSocialCre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.CitizenIdentificationNumber", "Yu.Toolkit.CitizenIdentificationNumber\Yu.Toolkit.CitizenIdentificationNumber.csproj", "{78744770-4022-43A8-986B-AF74B333CFDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.CitizenIdentificationNumber.Test", "Yu.Toolkit.CitizenIdentificationNumber.Test\Yu.Toolkit.CitizenIdentificationNumber.Test.csproj", "{7F7ED935-A27E-4719-A339-39940DC4C893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.CitizenIdentificationNumber.Test", "Yu.Toolkit.CitizenIdentificationNumber.Test\Yu.Toolkit.CitizenIdentificationNumber.Test.csproj", "{7F7ED935-A27E-4719-A339-39940DC4C893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.CitizenIdentificationImage", "Yu.Toolkit.CitizenIdentificationImage\Yu.Toolkit.CitizenIdentificationImage.csproj", "{F25EA38F-CD78-4F35-AFCF-6B95E9C2EDEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7F7ED935-A27E-4719-A339-39940DC4C893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F7ED935-A27E-4719-A339-39940DC4C893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F7ED935-A27E-4719-A339-39940DC4C893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25EA38F-CD78-4F35-AFCF-6B95E9C2EDEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25EA38F-CD78-4F35-AFCF-6B95E9C2EDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25EA38F-CD78-4F35-AFCF-6B95E9C2EDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25EA38F-CD78-4F35-AFCF-6B95E9C2EDEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

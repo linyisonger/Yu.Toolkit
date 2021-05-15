@@ -14,14 +14,15 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/linyisonger/Yu.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>1.The source of the area code http://www.mca.gov.cn/article/sj/xzqh/2020/;
+    <PackageReleaseNotes>1.The source of the area code http://www.mca.gov.cn/article/sj/xzqh/1980/;
 2.Some commonly used query methods.
+3.1980-2020
 </PackageReleaseNotes>
     <Summary>Common region code package.</Summary>
     <Copyright>林一怂儿</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,6 +37,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="RegionCode.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="RegionCodeUpdateUrl.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\juice.png">

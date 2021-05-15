@@ -5,7 +5,7 @@ This is a small c sharp toolkit.
 
 ## Yu.Toolkit.RegionCode 行政区划代码
 
-> 行政区划代码 http://www.mca.gov.cn/article/sj/xzqh/2020/    
+> 行政区划代码 http://www.mca.gov.cn/article/sj/xzqh/1980/   1980 - 2020
 
 - property 属性
   - Regions 行政区划代码
@@ -42,6 +42,7 @@ This is a small c sharp toolkit.
   * ``` void CheckOrganizationCode(string code)``` 检测签发机构是否正确
   * ```string Gengenerate(string[] organizationCodes = null, string regionCode = "")``` 生成社会统一信用代码
   * ```void Verification(string code)``` 验证社会统一信用代码是否符合规范
+  * ```Object Parse(string code)``` 解析内容 [未实现]
 
 ## Yu.Toolkit.CitizenIdentificationNumber 身份证号码校验与生成
 
@@ -51,6 +52,7 @@ This is a small c sharp toolkit.
   * ```string GetCheckCode(string str)``` 获取第十八位校验码
   * ```string Gengenerate(string regionCode = "", string dateBirth = "", CitizenIdentificationNumberGenderEnum gender = CitizenIdentificationNumberGenderEnum.Male | CitizenIdentificationNumberGenderEnum.Female)``` 随机生成身份证号码
   * ```void Verification(string code)``` 验证身份证号码是否符合规范
+  * ```Object Parse(string code)``` 解析内容 [未实现]
 
 ## Yu.Toolkit.CitizenIdentificationImage 身份证图像生成
 

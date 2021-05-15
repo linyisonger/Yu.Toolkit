@@ -42,7 +42,32 @@ namespace Yu.Toolkit
         public string Name { get; set; }
     }
 
-
+    /// <summary>
+    /// 统一的社会信用标识符
+    /// </summary>
+    public class UnifiedSocialCreditIdentifierDto
+    {
+        /// <summary>
+        ///  登记管理部门名称
+        /// </summary>
+        public string DepartmentName { get; set; }
+        /// <summary>
+        ///  签发机构名称
+        /// </summary>
+        public string OrganizationName { get; set; }
+        /// <summary>
+        /// 区域名称
+        /// </summary>
+        public string AreaName { get; set; }
+        /// <summary>
+        /// 城市名称
+        /// </summary>
+        public string CityName { get; set; }
+        /// <summary>
+        /// 省份名称
+        /// </summary>
+        public string ProvinceName { get; set; }
+    }
     /// <summary>
     ///  代码字符集 
     /// </summary>
@@ -177,5 +202,8 @@ namespace Yu.Toolkit
             if (!Regex.IsMatch(code, "[0-9A-HJ-NPQRTUWXY]{2}\\d{6}[0-9A-HJ-NPQRTUWXY]{10}")) throw new UnifiedSocialCreditIdentifierException("Does not meet the regular rules");
             if (code[17].ToString() != GetCheckCode(code)) throw new UnifiedSocialCreditIdentifierException("Check code error");
         }
+
+        
+
     }
 }

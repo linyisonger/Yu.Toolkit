@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace Yu.Toolkit
 {
@@ -20,6 +22,11 @@ namespace Yu.Toolkit
         /// 地区名称
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// 年份
+        /// </summary>
+        public int Year { get; set; }
         public RegionDto()
         {
 
@@ -29,12 +36,29 @@ namespace Yu.Toolkit
         /// </summary>
         /// <param name="code">地区代码</param>
         /// <param name="name">地区名称</param>
-        public RegionDto(string code, string name)
+        /// <param name="year">年份</param>
+        public RegionDto(string code, string name, int year)
         {
             Code = code;
             Name = name;
+            Year = year;
         }
 
+    }
+
+    /// <summary>
+    /// 地区更新地址 
+    /// </summary>
+    internal class RegionUpdateDto
+    {
+        /// <summary>
+        /// 年份
+        /// </summary>
+        public int Year { get; set; }
+        /// <summary>
+        /// 地址
+        /// </summary>
+        public string Url { get; set; }
     }
     /// <summary>
     /// 地区代码 
@@ -46,6 +70,11 @@ namespace Yu.Toolkit
         /// 地区代码Json文件的地址
         /// </summary>
         public static string RegionCodeJsonFilePath = "RegionCode.json";
+        /// <summary>
+        /// 更新地区代码地址文件
+        /// </summary>
+        public static string RegionCodeUpdateUrlJsonFilePath = "RegionCodeUpdateUrl.json";
+
 
         static List<RegionDto> _regions = null;
         static List<RegionDto> _provinces = null;
@@ -74,15 +103,6 @@ namespace Yu.Toolkit
         static List<RegionDto> GetRegions()
         {
             _regions = new List<RegionDto>();
-            // 行政区划代码 http://www.mca.gov.cn/article/sj/xzqh/2020/
-            // var html = File.ReadAllText(@"RegionCode.html");
-            // var trs = Regex.Matches(html, @"<tr height=""19"" style=""mso-height-source:userset;height:14.25pt"">[\s\S]*?</tr>");
-            // foreach (Match tr in trs)
-            // {
-            //     string name = Regex.Match(tr.Value, @"[\u4e00-\u9fa5]+")?.Groups[0]?.Value;
-            //     string code = Regex.Match(tr.Value, @"<td.*>([0-9]+)</td>")?.Groups[1]?.Value;
-            //     _regions.Add(new RegionDto(code, name));
-            // }  
             var json = File.ReadAllText(RegionCodeJsonFilePath);
             _regions = JsonConvert.DeserializeObject<List<RegionDto>>(json);
             return _regions;
@@ -160,7 +180,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static RegionDto GetProvinceByCode(string code)
         {
-            return Provinces.FirstOrDefault(r => r.Code == code);
+            return Provinces.FirstOrDefault(r => r.Code == code.Substring(0, 2).PadRight(6, '0'));
         }
         /// <summary>
         /// 获取省份
@@ -196,7 +216,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static RegionDto GetCityByCode(string code)
         {
-            return Cities.FirstOrDefault(r => r.Code == code);
+            return Cities.FirstOrDefault(r => r.Code == code.Substring(0, 4).PadRight(6, '0'));
         }
         /// <summary>
         /// 获取城市
@@ -280,5 +300,33 @@ namespace Yu.Toolkit
         {
             return Areas.Where(c => c.Code.StartsWith(code.Substring(0, 4))).ToList();
         }
+        /// <summary>
+        /// 更新配置文件
+        /// </summary>
+        public static async Task UpdateAsync()
+        {
+            var json = File.ReadAllText(RegionCodeUpdateUrlJsonFilePath);
+            var regionUpdates = JsonConvert.DeserializeObject<RegionUpdateDto[]>(json);
+            var regions = new List<RegionDto>();
+            foreach (var regionUpdate in regionUpdates)
+            {
+                var url = regionUpdate.Url;
+                var httpClient = new HttpClient();
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+                var html = response.IsSuccessStatusCode ? await response.Content.ReadAsStringAsync() : "";
+                var trs = Regex.Matches(html, @"<tr?.*>[\s\S]*?</tr>");
+                foreach (Match tr in trs)
+                {
+                    string name = Regex.Match(tr.Value, @"[\u4e00-\u9fa5]+")?.Groups[0]?.Value;
+                    string code = Regex.Match(tr.Value, @"<td?.*>([0-9]+)?.*</td>")?.Groups[1]?.Value?.Trim();
+                    if (string.IsNullOrWhiteSpace(code)) continue;
+                    var region = regions.FirstOrDefault(a => a.Code == code);
+                    if (region != null) region.Year = regionUpdate.Year;
+                    else regions.Add(new RegionDto(code, name, regionUpdate.Year));
+                }
+            }
+            File.WriteAllText(RegionCodeJsonFilePath, JsonConvert.SerializeObject(regions));
+        }
+
     }
 }

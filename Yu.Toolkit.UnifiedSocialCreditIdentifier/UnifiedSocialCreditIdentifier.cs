@@ -202,8 +202,29 @@ namespace Yu.Toolkit
             if (!Regex.IsMatch(code, "[0-9A-HJ-NPQRTUWXY]{2}\\d{6}[0-9A-HJ-NPQRTUWXY]{10}")) throw new UnifiedSocialCreditIdentifierException("Does not meet the regular rules");
             if (code[17].ToString() != GetCheckCode(code)) throw new UnifiedSocialCreditIdentifierException("Check code error");
         }
-
-        
+        /// <summary>
+        /// 解析内容
+        /// </summary>
+        /// <param name="code">统一的社会信用标识符</param>
+        /// <returns></returns>
+        public static UnifiedSocialCreditIdentifierDto Parse(string code)
+        {
+            CheckOrganizationCode(code.Substring(0,2));
+            Verification(code);
+            var departmentCode = code[0].ToString();
+            var organizationCode = code[1].ToString();
+            var regionCode = code.Substring(2, 6);
+            var department = RegistrationManagementDepartmentCodeList.FirstOrDefault(a => a.Code == departmentCode);
+            var organization = department.OrganizationCodes.FirstOrDefault(a => a.Code == organizationCode);
+            return new()
+            {
+                DepartmentName = department?.Name,
+                OrganizationName = organization?.Name,
+                ProvinceName = RegionCode.GetProvinceNameByCode(regionCode),
+                CityName = RegionCode.GetCityNameByCode(regionCode),
+                AreaName = RegionCode.GetAreaNameByCode(regionCode),
+            };
+        }
 
     }
 }

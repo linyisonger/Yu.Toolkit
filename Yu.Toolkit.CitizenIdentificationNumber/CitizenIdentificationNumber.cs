@@ -47,6 +47,35 @@ namespace Yu.Toolkit
     }
     /// <summary>
     /// 公民身份号码
+    /// </summary>
+    public class CitizenIdentificationNumberDto
+    {
+        /// <summary>
+        /// 性别 男女
+        /// </summary>
+        public string Gender { get; set; }
+        /// <summary>
+        /// 区域名称
+        /// </summary>
+        public string AreaName { get; set; }
+        /// <summary>
+        /// 城市名称
+        /// </summary>
+        public string CityName { get; set; }
+        /// <summary>
+        /// 省份名称
+        /// </summary>
+        public string ProvinceName { get; set; }
+        /// <summary>
+        /// 生日
+        /// </summary>
+        public DateTime Birthday { get; set; }
+    }
+
+
+
+    /// <summary>
+    /// 公民身份号码
     /// http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=080D6FBF2BB468F9007657F26D60013E
     /// </summary>
     public static class CitizenIdentificationNumber
@@ -125,5 +154,30 @@ namespace Yu.Toolkit
             if (!Regex.IsMatch(code, "^[1-9]\\d{5}(18|19|([23]\\d))\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$")) throw new CitizenIdentificationNumberException("Does not meet the regular rules");
             if (code[17].ToString() != GetCheckCode(code)) throw new CitizenIdentificationNumberException("Check code error");
         }
+
+        /// <summary>
+        /// 解析内容
+        /// </summary>
+        /// <param name="code">身份证号码标识符</param>
+        /// <returns></returns>
+        public static CitizenIdentificationNumberDto Parse(string code)
+        {
+            Verification(code);
+            var regionCode = code.Substring(0, 6);
+            var year = int.Parse(code.Substring(6, 4));
+            var month = int.Parse(code.Substring(10, 2));
+            var day = int.Parse(code.Substring(12, 2));
+            var birthday = new DateTime(year, month, day);
+            var gender = int.Parse(code.Substring(14, 3)) % 2 == 0 ? "女" : "男";
+            return new()
+            {
+                ProvinceName = RegionCode.GetProvinceNameByCode(regionCode),
+                CityName = RegionCode.GetCityNameByCode(regionCode),
+                AreaName = RegionCode.GetAreaNameByCode(regionCode),
+                Gender = gender,
+                Birthday = birthday
+            };
+        }
+
     }
 }

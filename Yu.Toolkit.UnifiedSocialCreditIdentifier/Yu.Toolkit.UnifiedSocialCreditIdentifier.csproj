@@ -13,17 +13,15 @@
     <NeutralLanguage></NeutralLanguage>
     <PackageIcon>juice.png</PackageIcon>
     <PackageReleaseNotes>1. Guideline http://c.gb688.cn/bzgk/gb/showGb?type=online&amp;hcno=080D6FBF2BB468F9007657F26D60013E
-2. Generation and Verification.</PackageReleaseNotes>
+2. Generation
+3. Verification.
+4. Parse.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Update="UnifiedSocialCreditIdentifierCodeCharacterSet.json">
@@ -42,6 +40,11 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Yu.Toolkit.RegionCode" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

@@ -5,4 +5,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Yu.Toolkit.CitizenIdentificationImage\Yu.Toolkit.CitizenIdentificationImage.csproj" />
+    <ProjectReference Include="..\Yu.Toolkit.CitizenIdentificationNumber\Yu.Toolkit.CitizenIdentificationNumber.csproj" />
+    <ProjectReference Include="..\Yu.Toolkit.RegionCode\Yu.Toolkit.RegionCode.csproj" />
+    <ProjectReference Include="..\Yu.Toolkit.UnifiedSocialCreditIdentifier\Yu.Toolkit.UnifiedSocialCreditIdentifier.csproj" />
+  </ItemGroup>
+
 </Project>

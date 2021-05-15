@@ -14,12 +14,12 @@ namespace Yu.Toolkit
         static readonly string frontTemplateImagePath = $"{nameof(CitizenIdentificationImage)}FrontTemplateImage.jfif";
         static readonly string frontTemplateAvatarPhotoPath = $"{nameof(CitizenIdentificationImage)}FrontTemplateAvatarPhoto.png";
         static readonly string backTemplateImagePath = $"{nameof(CitizenIdentificationImage)}BackTemplateImage.jfif";
-       
+
         static FontFamily _ocr = null;
         /// <summary>
         /// 格式居中
         /// </summary>
-        static StringFormat StringFormatCenter => new()
+        static StringFormat StringFormatCenter => new StringFormat()
         {
             // 居中
             Alignment = StringAlignment.Center
@@ -27,13 +27,13 @@ namespace Yu.Toolkit
         /// <summary>
         /// 黑色笔刷
         /// </summary>
-        static SolidBrush SolidBrushBlack => new(Color.Black);
+        static SolidBrush SolidBrushBlack => new SolidBrush(Color.Black);
         /// <summary>
         /// 字体
         /// </summary>
-        static FontFamily Ocr => _ocr ?? GetOcr(); 
-        static FontFamily Black => new("黑体");
-        static FontFamily WinBlack => new("微软雅黑");
+        static FontFamily Ocr => _ocr ?? GetOcr();
+        static FontFamily Black => new FontFamily("黑体");
+        static FontFamily WinBlack => new FontFamily("微软雅黑");
         static FontFamily GetOcr()
         {
             var font = new PrivateFontCollection();
@@ -94,7 +94,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static Bitmap GengenerateFront(string issuingAuthority, string validPeriod = "")
         {
-            Bitmap bm = new(frontTemplateImagePath);
+            Bitmap bm = new Bitmap(frontTemplateImagePath);
             Graphics gp = Graphics.FromImage(bm);
             gp.DrawString(issuingAuthority, new Font(Black, 13, FontStyle.Regular), SolidBrushBlack, 130, 153);
             gp.DrawString(validPeriod, new Font(WinBlack, 11, FontStyle.Regular), SolidBrushBlack, 130, 178);
@@ -111,14 +111,12 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static Bitmap GengenerateBack(string name, string ethnic, string address, string citizenIdentificationNumber, Image avatarPhoto = null)
         {
-            // 出生日期
-            var birthday = citizenIdentificationNumber.Substring(6, 8);
-            var year = birthday.Substring(0, 4);
-            var month = int.Parse(birthday.Substring(4, 2)).ToString();
-            var day = int.Parse(birthday.Substring(6, 2)).ToString();
-            // 顺序号  奇数男  偶数女
-            var gender = int.Parse(citizenIdentificationNumber.Substring(14, 3)) % 2 == 0 ? "女" : "男";
-            Bitmap bm = new(backTemplateImagePath);
+            var citizenIdentificationNumberDto = CitizenIdentificationNumber.Parse(citizenIdentificationNumber);
+            var year = citizenIdentificationNumberDto.Birthday.Year.ToString();
+            var month = citizenIdentificationNumberDto.Birthday.Month.ToString();
+            var day = citizenIdentificationNumberDto.Birthday.Day.ToString();
+            var gender = citizenIdentificationNumberDto.Gender;
+            Bitmap bm = new Bitmap(backTemplateImagePath);
             Graphics gp = Graphics.FromImage(bm);
             gp.DrawString(name, new Font(Black, 13, FontStyle.Regular, GraphicsUnit.Point), SolidBrushBlack, 63, 31.3f);
             gp.DrawString(gender, new Font(Black, 11, FontStyle.Regular), SolidBrushBlack, 63, 58.3f);

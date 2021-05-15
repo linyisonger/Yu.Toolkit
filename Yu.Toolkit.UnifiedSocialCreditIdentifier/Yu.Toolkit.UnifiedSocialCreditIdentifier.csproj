@@ -20,7 +20,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -43,8 +43,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" />
-    <PackageReference Include="Yu.Toolkit.RegionCode" Version="1.0.4" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1"  >
+      <IncludeAssets>all</IncludeAssets>
+      <ExcludeAssets>contentFiles</ExcludeAssets>
+      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Yu.Toolkit.RegionCode" Version="1.0.4" >
+      <IncludeAssets>all</IncludeAssets>
+      <ExcludeAssets>contentFiles</ExcludeAssets>
+      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

@@ -14,10 +14,11 @@
     <PackageIcon>juice.png</PackageIcon>
     <RepositoryUrl>https://github.com/linyisonger/Yu.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>1. Guideline http://c.gb688.cn/bzgk/gb/showGb?type=online&amp;hcno=080D6FBF2BB468F9007657F26D60013E
-2. Generation
-3. Verification.
-4. Parse.
+    <PackageReleaseNotes>
+      1. Guideline http://c.gb688.cn/bzgk/gb/showGb?type=online&amp;hcno=080D6FBF2BB468F9007657F26D60013E
+      2. Generation
+      3. Verification.
+      4. Parse.
 </PackageReleaseNotes>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
@@ -25,8 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Yu.Toolkit.RegionCode" Version="1.0.2" />
+    <PackageReference Include="Yu.Toolkit.RegionCode" Version="1.0.2" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>

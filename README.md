@@ -7,6 +7,14 @@ This is a small c sharp toolkit.
 
 > 行政区划代码 http://www.mca.gov.cn/article/sj/xzqh/1980/   1980 - 2020
 
+### 1.0.4
+
+1. Add support version 添加支持版本
+
+### 1.0.3
+
+1. Reference dependency 引用依赖
+
 ### 1.0.2
 
 1. Add update 添加更新
@@ -46,6 +54,10 @@ This is a small c sharp toolkit.
 
 > 社会统一信用代码 http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=24691C25985C1073D3A7C85629378AC0
 
+### 1.0.3
+
+1. Reference dependency 引用依赖
+
 ### 1.0.2
 
 1. Add parse method 添加解析方法
@@ -68,6 +80,10 @@ This is a small c sharp toolkit.
 
 > 公民身份号码  http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=080D6FBF2BB468F9007657F26D60013E
 
+### 1.0.3
+
+1. Reference dependency 引用依赖
+
 ### 1.0.2
 
 1. Add parse method 添加解析方法
@@ -81,8 +97,7 @@ This is a small c sharp toolkit.
 * method 方法
   * ```string GetCheckCode(string str)``` 获取第十八位校验码
   * ```string Gengenerate(string regionCode = "", string dateBirth = "", CitizenIdentificationNumberGenderEnum gender = CitizenIdentificationNumberGenderEnum.Male | CitizenIdentificationNumberGenderEnum.Female)``` 随机生成身份证号码
-  * ```void Verification(string code)``` 验证身份证号码是否符合规范
-  * ```Object Parse(string code)``` 解析内容
+  * ```void Verification(string code)``` 验证身份证号码是否符合规范 
 
 ## Yu.Toolkit.CitizenIdentificationImage 身份证图像生成
 

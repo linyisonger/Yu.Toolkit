@@ -54,6 +54,10 @@ This is a small c sharp toolkit.
 
 > 社会统一信用代码 http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=24691C25985C1073D3A7C85629378AC0
 
+### 1.0.4
+
+1. Add support version 添加支持版本
+
 ### 1.0.3
 
 1. Reference dependency 引用依赖
@@ -79,6 +83,10 @@ This is a small c sharp toolkit.
 ## Yu.Toolkit.CitizenIdentificationNumber 身份证号码校验与生成
 
 > 公民身份号码  http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=080D6FBF2BB468F9007657F26D60013E
+
+### 1.0.4
+
+1. Add support version 添加支持版本
 
 ### 1.0.3
 

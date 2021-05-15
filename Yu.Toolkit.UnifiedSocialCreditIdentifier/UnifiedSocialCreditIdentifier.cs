@@ -216,7 +216,7 @@ namespace Yu.Toolkit
             var regionCode = code.Substring(2, 6);
             var department = RegistrationManagementDepartmentCodeList.FirstOrDefault(a => a.Code == departmentCode);
             var organization = department.OrganizationCodes.FirstOrDefault(a => a.Code == organizationCode);
-            return new()
+            return new UnifiedSocialCreditIdentifierDto()
             {
                 DepartmentName = department?.Name,
                 OrganizationName = organization?.Name,

@@ -7,7 +7,7 @@ namespace Yu.Toolkit.App
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static  void Main(string[] args)
         { 
         }
     }

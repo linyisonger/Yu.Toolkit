@@ -169,7 +169,7 @@ namespace Yu.Toolkit
             var day = int.Parse(code.Substring(12, 2));
             var birthday = new DateTime(year, month, day);
             var gender = int.Parse(code.Substring(14, 3)) % 2 == 0 ? "女" : "男";
-            return new()
+            return new CitizenIdentificationNumberDto()
             {
                 ProvinceName = RegionCode.GetProvinceNameByCode(regionCode),
                 CityName = RegionCode.GetCityNameByCode(regionCode),

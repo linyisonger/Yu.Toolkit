@@ -1,4 +1,3 @@
- ![](juice.png)
 
 # Yu.Toolkit 工具包
 
@@ -7,6 +6,9 @@
  This is a small c sharp toolkit.
 
  一个简单的c#工具包
+
+ ![](juice.png)
+
 
 ## Yu.Toolkit.RegionCode 行政区划代码
 

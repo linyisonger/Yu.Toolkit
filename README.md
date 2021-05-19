@@ -7,6 +7,10 @@ This is a small c sharp toolkit.
 
 > 行政区划代码 http://www.mca.gov.cn/article/sj/xzqh/1980/   1980 - 2020
 
+### 1.0.5
+
+1. Dependency update 依赖关系更新
+
 ### 1.0.4
 
 1. Add support version 添加支持版本
@@ -54,6 +58,10 @@ This is a small c sharp toolkit.
 
 > 社会统一信用代码 http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=24691C25985C1073D3A7C85629378AC0
 
+### 1.0.5
+
+1. Dependency update 依赖关系更新
+
 ### 1.0.4
 
 1. Add support version 添加支持版本
@@ -84,6 +92,10 @@ This is a small c sharp toolkit.
 
 > 公民身份号码  http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=080D6FBF2BB468F9007657F26D60013E
 
+### 1.0.5
+
+1. Dependency update 依赖关系更新
+
 ### 1.0.4
 
 1. Add support version 添加支持版本
@@ -109,6 +121,10 @@ This is a small c sharp toolkit.
 
 ## Yu.Toolkit.CitizenIdentificationImage 身份证图像生成
 
+### 1.0.1
+
+1. Dependency update 依赖关系更新
+
 ### 1.0.0
 
 * method 方法
@@ -119,4 +135,12 @@ This is a small c sharp toolkit.
   * ![](preview/身份证反面生成预览.png)
 
 
+
+## Yu.Toolkit.NameGenerator  名称生成器
+
+### 1.0.0
+
+method 方法
+
+* ```string Generate(NameGeneratorGenderEnum gender = NameGeneratorGenderEnum.Male | NameGeneratorGenderEnum.Female)``` 生成名字 
 

@@ -4,13 +4,6 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Yu.Toolkit.CitizenIdentificationImage\Yu.Toolkit.CitizenIdentificationImage.csproj" />
-    <ProjectReference Include="..\Yu.Toolkit.CitizenIdentificationNumber\Yu.Toolkit.CitizenIdentificationNumber.csproj" />
-    <ProjectReference Include="..\Yu.Toolkit.NameGenerator\Yu.Toolkit.NameGenerator.csproj" />
-    <ProjectReference Include="..\Yu.Toolkit.RegionCode\Yu.Toolkit.RegionCode.csproj" />
-    <ProjectReference Include="..\Yu.Toolkit.UnifiedSocialCreditIdentifier\Yu.Toolkit.UnifiedSocialCreditIdentifier.csproj" />
-  </ItemGroup>
+ 
 
 </Project>

@@ -11,9 +11,9 @@ namespace Yu.Toolkit
     /// </summary>
     public static class CitizenIdentificationImage
     {
-        static readonly string frontTemplateImagePath = $"{nameof(CitizenIdentificationImage)}FrontTemplateImage.jfif";
-        static readonly string frontTemplateAvatarPhotoPath = $"{nameof(CitizenIdentificationImage)}FrontTemplateAvatarPhoto.png";
-        static readonly string backTemplateImagePath = $"{nameof(CitizenIdentificationImage)}BackTemplateImage.jfif";
+        static readonly string frontTemplateImagePath = "YuToolkitStaticFiles/CitizenIdentificationImageFrontTemplateImage.jfif";
+        static readonly string frontTemplateAvatarPhotoPath = "YuToolkitStaticFiles/CitizenIdentificationImageFrontTemplateAvatarPhoto.png";
+        static readonly string backTemplateImagePath = "YuToolkitStaticFiles/CitizenIdentificationImageBackTemplateImage.jfif";
 
         static FontFamily _ocr = null;
         /// <summary>
@@ -37,7 +37,7 @@ namespace Yu.Toolkit
         static FontFamily GetOcr()
         {
             var font = new PrivateFontCollection();
-            font.AddFontFile("OCR-B 10 BT.ttf");
+            font.AddFontFile("YuToolkitStaticFiles/OCR-B 10 BT.ttf");
             _ocr = new FontFamily(font.Families[0].Name, font);
             return _ocr;
         }

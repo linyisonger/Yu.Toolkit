@@ -102,11 +102,11 @@ namespace Yu.Toolkit
         /// <summary>
         /// 代码字符集配置文件地址
         /// </summary>
-        public static string CodeCharacterSetJsonFilePath = $"{nameof(UnifiedSocialCreditIdentifier)}CodeCharacterSet.json";
+        public const string CodeCharacterSetJsonFilePath = "Yu.Toolkit.UnifiedSocialCreditIdentifierStaticFiles/UnifiedSocialCreditIdentifierCodeCharacterSet.json";
         /// <summary>
         /// 登记管理部门代码配置文件地址
         /// </summary>
-        public static string RegistrationManagementDepartmentCodeJsonFilePath = $"{nameof(UnifiedSocialCreditIdentifier)}RegistrationManagementDepartmentCode.json";
+        public const string RegistrationManagementDepartmentCodeJsonFilePath = "Yu.Toolkit.UnifiedSocialCreditIdentifierStaticFiles/UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json";
 
         static readonly string[] _defalutOrganizationCodes = new string[] { "91", "92" };
         static readonly string _defalutRegionCode = "410783";

@@ -20,16 +20,10 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.5</Version>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="UnifiedSocialCreditIdentifierCodeCharacterSet.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\juice.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -42,17 +36,23 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup> 
+    <PackageReference Include="Yu.Toolkit.RegionCode" Version="2.*" PrivateAssets="analyzers" />
+  </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1"  >
-      <IncludeAssets>all</IncludeAssets>
-      <ExcludeAssets>contentFiles</ExcludeAssets>
-      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Yu.Toolkit.RegionCode" Version="1.0.4" >
-      <IncludeAssets>all</IncludeAssets>
-      <ExcludeAssets>contentFiles</ExcludeAssets>
-      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
-    </PackageReference>
+    <None Include="Yu.Toolkit.UnifiedSocialCreditIdentifierStaticFiles\UnifiedSocialCreditIdentifierCodeCharacterSet.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>contentFiles\any\any\Yu.Toolkit.UnifiedSocialCreditIdentifierStaticFiles\</PackagePath>
+    </None>
+    <None Include="Yu.Toolkit.UnifiedSocialCreditIdentifierStaticFiles\UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>contentFiles\any\any\Yu.Toolkit.UnifiedSocialCreditIdentifierStaticFiles\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

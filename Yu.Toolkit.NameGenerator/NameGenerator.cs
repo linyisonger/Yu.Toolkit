@@ -45,11 +45,12 @@ namespace Yu.Toolkit
     /// </summary>
     public static class NameGenerator
     {
-        private readonly static string _familyNameFileUrl = $"{nameof(NameGenerator)}FamilyName.txt";
-        private readonly static string _maleNameFileUrl = $"{nameof(NameGenerator)}MaleName.txt";
-        private readonly static string _femaleNameFileUrl = $"{nameof(NameGenerator)}FemaleName.txt";
-        private readonly static string _maleDoubleFileUrl = $"{nameof(NameGenerator)}MaleDouble.txt";
-        private readonly static string _femaleDoubleFileUrl = $"{nameof(NameGenerator)}FemaleDouble.txt";
+        
+        private readonly static string _familyNameFileUrl = "Yu.Toolkit.NameGeneratorStaticFiles/NameGeneratorFamilyName.txt";
+        private readonly static string _maleNameFileUrl = "Yu.Toolkit.NameGeneratorStaticFiles/NameGeneratorMaleName.txt";
+        private readonly static string _femaleNameFileUrl = "Yu.Toolkit.NameGeneratorStaticFiles/NameGeneratorFemaleName.txt";
+        private readonly static string _maleDoubleFileUrl = "Yu.Toolkit.NameGeneratorStaticFiles/NameGeneratorMaleDouble.txt";
+        private readonly static string _femaleDoubleFileUrl = "Yu.Toolkit.NameGeneratorStaticFiles/NameGeneratorFemaleDouble.txt";
 
         static List<string> _familyName;
         static List<string> _maleName;

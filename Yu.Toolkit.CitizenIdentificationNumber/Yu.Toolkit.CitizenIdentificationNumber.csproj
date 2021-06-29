@@ -19,29 +19,17 @@
       2. Generation
       3. Verification.
       4. Parse.
-</PackageReleaseNotes>
+    </PackageReleaseNotes>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.5</Version>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1"  >
-      <IncludeAssets>all</IncludeAssets>
-      <ExcludeAssets>contentFiles</ExcludeAssets>
-      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Yu.Toolkit.RegionCode" Version="1.0.4"  >
-      <IncludeAssets>all</IncludeAssets>
-      <ExcludeAssets>contentFiles</ExcludeAssets>
-      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="Yu.Toolkit.RegionCode" Version="2.*"   PrivateAssets="analyzers" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="CitizenIdentificationNumberCodeCharacterSet.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\juice.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -51,6 +39,12 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Yu.Toolkit.CitizenIdentificationNumberStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>contentFiles\any\any\Yu.Toolkit.CitizenIdentificationNumberStaticFiles\</PackagePath>
     </None>
   </ItemGroup>
 

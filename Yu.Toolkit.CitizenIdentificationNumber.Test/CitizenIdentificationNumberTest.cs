@@ -19,5 +19,12 @@ namespace Yu.Toolkit.Test
             Assert.Equal("Check code error", Assert.Throws<CitizenIdentificationNumberException>(() => { CitizenIdentificationNumber.Verification("110105194912310029"); }).Message);
             Assert.Equal("Length must be 18", Assert.Throws<CitizenIdentificationNumberException>(() => { CitizenIdentificationNumber.Verification("B23"); }).Message);
         }
+
+
+        [Fact(DisplayName = "解析身份证号码")]
+        public void ParseTest()
+        {
+            Assert.Equal("女", CitizenIdentificationNumber.Parse("11010519491231002X").Gender);
+        }
     }
 }

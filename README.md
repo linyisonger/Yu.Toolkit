@@ -10,7 +10,7 @@
 
 ## Yu.Toolkit.RegionCode 行政区划代码
 
- ![](https://img.shields.io/nuget/v/Yu.Toolkit.RegionCode?style=for-the-badge)
+ ![](https://img.shields.io/nuget/v/Yu.Toolkit.RegionCode?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.RegionCode?style=for-the-badge)
 
 > 行政区划代码 http://www.mca.gov.cn/article/sj/xzqh/1980/   1980 - 2020
 
@@ -63,7 +63,7 @@
 
 ## Yu.Toolkit.UnifiedSocialCreditIdentifier 社会统一信用代码校验与生成
 
- ![](https://img.shields.io/nuget/v/Yu.Toolkit.UnifiedSocialCreditIdentifier?style=for-the-badge)
+ ![](https://img.shields.io/nuget/v/Yu.Toolkit.UnifiedSocialCreditIdentifier?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.UnifiedSocialCreditIdentifier?style=for-the-badge)
 
 > 社会统一信用代码 http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=24691C25985C1073D3A7C85629378AC0
 
@@ -99,7 +99,7 @@
 
 ## Yu.Toolkit.CitizenIdentificationNumber 身份证号码校验与生成
 
- ![](https://img.shields.io/nuget/v/Yu.Toolkit.CitizenIdentificationNumber?style=for-the-badge)
+ ![](https://img.shields.io/nuget/v/Yu.Toolkit.CitizenIdentificationNumber?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.CitizenIdentificationNumber?style=for-the-badge)
 
 > 公民身份号码  http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=080D6FBF2BB468F9007657F26D60013E
 
@@ -132,7 +132,7 @@
 
 ## Yu.Toolkit.CitizenIdentificationImage 身份证图像生成
 
- ![](https://img.shields.io/nuget/v/Yu.Toolkit.CitizenIdentificationImage?style=for-the-badge)
+ ![](https://img.shields.io/nuget/v/Yu.Toolkit.CitizenIdentificationImage?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.CitizenIdentificationImage?style=for-the-badge)
 
 ### 1.0.1
 
@@ -151,7 +151,7 @@
 
 ## Yu.Toolkit.NameGenerator  名称生成器
 
- ![](https://img.shields.io/nuget/v/Yu.Toolkit.NameGenerator?style=for-the-badge)
+ ![](https://img.shields.io/nuget/v/Yu.Toolkit.NameGenerator?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.NameGenerator?style=for-the-badge)
 
 ### 1.0.0
 

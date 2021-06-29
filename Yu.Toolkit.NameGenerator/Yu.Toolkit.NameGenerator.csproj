@@ -6,7 +6,7 @@
     <Product>Yu.Toolkit</Product>
     <PackageIcon>juice.png</PackageIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageId>Yu.Toolkit.NameGenerator</PackageId>
     <Description>Name generator package. For documentation, see github.</Description>
     <NeutralLanguage></NeutralLanguage>
@@ -19,23 +19,33 @@
     <Copyright>林一怂儿</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="NameGeneratorFemaleName.txt">
+    <None Include="NameGeneratorFemaleName.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="NameGeneratorMaleName.txt">
+    <None Include="NameGeneratorMaleName.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="NameGeneratorMaleDouble.txt">
+    <None Include="NameGeneratorMaleDouble.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="NameGeneratorFemaleDouble.txt">
+    <None Include="NameGeneratorFemaleDouble.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="NameGeneratorFamilyName.txt">
+    <None Include="NameGeneratorFamilyName.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\juice.png">

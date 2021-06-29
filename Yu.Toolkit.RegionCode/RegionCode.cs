@@ -69,11 +69,11 @@ namespace Yu.Toolkit
         /// <summary>
         /// 地区代码Json文件的地址
         /// </summary>
-        public static string RegionCodeJsonFilePath = "RegionCode.json";
+        public static string RegionCodeJsonFilePath = "YuStaticFiles/RegionCode.json";
         /// <summary>
         /// 更新地区代码地址文件
         /// </summary>
-        public static string RegionCodeUpdateUrlJsonFilePath = "RegionCodeUpdateUrl.json";
+        public static string RegionCodeUpdateUrlJsonFilePath = "YuStaticFiles/RegionCodeUpdateUrl.json";
 
 
         static List<RegionDto> _regions = null;
@@ -103,7 +103,7 @@ namespace Yu.Toolkit
         static List<RegionDto> GetRegions()
         {
             _regions = new List<RegionDto>();
-            var json = File.ReadAllText(RegionCodeJsonFilePath);
+            var json =  File.ReadAllText(RegionCodeJsonFilePath);
             _regions = JsonConvert.DeserializeObject<List<RegionDto>>(json);
             return _regions;
         }

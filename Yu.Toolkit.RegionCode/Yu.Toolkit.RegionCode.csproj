@@ -6,6 +6,9 @@
     <Product>Yu.Toolkit</Product>
     <PackageIcon>juice.png</PackageIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <CopyLocalLockFileAssemblies>CopyPackagesue</CopyLocalLockFileAssemblies>
+
+    <CopyLocalLockFileAssemblies>CopyPackagesue</CopyLocalLockFileAssemblies>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageId>Yu.Toolkit.RegionCode</PackageId>
     <Description>Common region code package. For documentation, see github.</Description>
@@ -19,12 +22,14 @@
       2.Some commonly used query methods.
       3.1980-2020
     </PackageReleaseNotes>
+    <IncludeContentInPack></IncludeContentInPack>
     <Summary>Common region code package.</Summary>
     <Copyright>林一怂儿</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.6</Version>
+    <Version>2.0.0</Version>
   </PropertyGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1">
@@ -35,19 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="RegionCode.json">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="RegionCodeUpdateUrl.json">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="..\juice.png">
       <Pack>True</Pack>
-      <PackagePath></PackagePath>
+      <PackagePath>.\</PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\LICENSE">
@@ -55,6 +50,19 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="YuStaticFiles\RegionCode.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>contentFiles\any\any\YuStaticFiles\</PackagePath>
+    </None>
+    <None Include="YuStaticFiles\RegionCodeUpdateUrl.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>contentFiles\any\any\YuStaticFiles\</PackagePath>
+    </None>
   </ItemGroup>
+
 
 </Project>

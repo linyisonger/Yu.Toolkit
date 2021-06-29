@@ -86,7 +86,7 @@ namespace Yu.Toolkit
         /// <summary>
         /// 代码字符集配置文件地址
         /// </summary>
-        public const string CodeCharacterSetJsonFilePath = "Yu.Toolkit.CitizenIdentificationNumberStaticFiles/CitizenIdentificationNumberCodeCharacterSet.json";
+        public const string CodeCharacterSetJsonFilePath = "YuToolkitStaticFiles/CitizenIdentificationNumberCodeCharacterSet.json";
 
         static List<CodeCharacterSetDto> _codeCharacterSetList = null;
         /// <summary>

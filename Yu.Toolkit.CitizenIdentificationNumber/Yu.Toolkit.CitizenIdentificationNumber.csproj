@@ -40,11 +40,11 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Yu.Toolkit.CitizenIdentificationNumberStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
+    <Content Include="YuToolkitStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\Yu.Toolkit.CitizenIdentificationNumberStaticFiles\</PackagePath>
+      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
     </Content>
   </ItemGroup>
 

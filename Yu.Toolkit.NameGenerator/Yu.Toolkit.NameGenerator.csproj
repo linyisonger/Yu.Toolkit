@@ -36,35 +36,35 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Yu.Toolkit.NameGeneratorStaticFiles\NameGeneratorFamilyName.txt" >
+    <Content Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt" >
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\Yu.Toolkit.NameGeneratorStaticFiles\</PackagePath>
+      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
     </Content>
-    <Content Include="Yu.Toolkit.NameGeneratorStaticFiles\NameGeneratorFemaleDouble.txt">
+    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\Yu.Toolkit.NameGeneratorStaticFiles\</PackagePath>
+      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
     </Content>
-    <Content Include="Yu.Toolkit.NameGeneratorStaticFiles\NameGeneratorFemaleName.txt">
+    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\Yu.Toolkit.NameGeneratorStaticFiles\</PackagePath>
+      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
     </Content>
-    <Content Include="Yu.Toolkit.NameGeneratorStaticFiles\NameGeneratorMaleDouble.txt">
+    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\Yu.Toolkit.NameGeneratorStaticFiles\</PackagePath>
+      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
     </Content>
-    <Content Include="Yu.Toolkit.NameGeneratorStaticFiles\NameGeneratorMaleName.txt">
+    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\Yu.Toolkit.NameGeneratorStaticFiles\</PackagePath>
+      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
     </Content>
   </ItemGroup>
 

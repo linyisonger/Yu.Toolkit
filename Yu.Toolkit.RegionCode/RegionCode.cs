@@ -69,11 +69,11 @@ namespace Yu.Toolkit
         /// <summary>
         /// 地区代码Json文件的地址
         /// </summary>
-        public const string RegionCodeJsonFilePath = "Yu.Toolkit.RegionCodeStaticFiles/RegionCode.json";
+        public const string RegionCodeJsonFilePath = "YuToolkitStaticFiles/RegionCode.json";
         /// <summary>
         /// 更新地区代码地址文件
         /// </summary>
-        public const string RegionCodeUpdateUrlJsonFilePath = "Yu.Toolkit.RegionCodeStaticFiles/RegionCodeUpdateUrl.json";
+        public const string RegionCodeUpdateUrlJsonFilePath = "YuToolkitStaticFiles/RegionCodeUpdateUrl.json";
 
 
         static List<RegionDto> _regions = null;

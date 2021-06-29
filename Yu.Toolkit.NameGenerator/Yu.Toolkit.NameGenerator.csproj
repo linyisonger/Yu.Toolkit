@@ -36,36 +36,36 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt" >
+    <None Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt" >
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
+    </None>
+    <None Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
+    </None>
+    <None Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
+    </None>
+    <None Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
+    </None>
+    <None Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
+    </None>
   </ItemGroup>
 
 </Project>

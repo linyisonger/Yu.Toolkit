@@ -41,18 +41,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierCodeCharacterSet.json">
+    <None Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierCodeCharacterSet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
+    </None>
+    <None Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
+    </None>
   </ItemGroup>
 
 </Project>

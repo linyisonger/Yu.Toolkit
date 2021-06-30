@@ -19,10 +19,8 @@ jobs:
           dotnet nuget locals all --clear
       - name: test
         run: dotnet test
-      - name: restore
-        run: dotnet restore
       - name: build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build --configuration Release
       - name: publish
         run: |
           dotnet nuget push "*/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key  ${{ secrets.NugetKey }} 

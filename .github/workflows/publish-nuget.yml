@@ -20,7 +20,7 @@ jobs:
       - name: test
         run: dotnet test
       - name: build
-        run: dotnet build --configuration Release
+        run: dotnet build
       - name: publish
         run: |
-          dotnet nuget push "*/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key  ${{ secrets.NugetKey }} 
+          dotnet nuget push "*/bin/Debug/*.nupkg" --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key  ${{ secrets.NugetKey }} 

@@ -20,12 +20,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="YuToolkitStaticFiles\**">
+    <EmbeddedResource Include="YuToolkitStaticFiles\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
+    </EmbeddedResource>
     <None Include="../juice.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

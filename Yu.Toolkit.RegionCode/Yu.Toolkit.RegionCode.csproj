@@ -50,12 +50,12 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="YuToolkitStaticFiles\**">
+    <Content Include="YuToolkitStaticFiles\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
+    </Content>
   </ItemGroup>
 
 

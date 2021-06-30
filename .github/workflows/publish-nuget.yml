@@ -14,7 +14,9 @@ jobs:
         with:
           dotnet-version: 5.0.101
       - name: 清除缓存
-        run: dotnet clean
+        run: |
+          dotnet clean
+          dotnet nuget locals all --clear
       - name: 运行测试
         run: dotnet test
       - name: 还原包

@@ -22,7 +22,7 @@
     </PackageReleaseNotes>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.0.2</Version>
+    <Version>2.0.4</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
@@ -41,12 +41,12 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
+    <Content Include="YuToolkitStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
+    </Content>
   </ItemGroup>
 
 </Project>

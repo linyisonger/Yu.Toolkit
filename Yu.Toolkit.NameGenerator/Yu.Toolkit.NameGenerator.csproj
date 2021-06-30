@@ -19,7 +19,7 @@
     <Copyright>林一怂儿</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.0.2</Version>
+    <Version>2.0.4</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
@@ -37,36 +37,36 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt" >
+    <Content Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
+    </Content>
+    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
+    </Content>
+    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
+    </Content>
+    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
+    </Content>
+    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
+    </Content>
   </ItemGroup>
 
 </Project>

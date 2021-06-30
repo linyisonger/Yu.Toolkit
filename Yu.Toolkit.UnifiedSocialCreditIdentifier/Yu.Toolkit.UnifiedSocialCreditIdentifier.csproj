@@ -20,7 +20,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.0.2</Version>
+    <Version>2.0.4</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
@@ -42,18 +42,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierCodeCharacterSet.json">
+    <Content Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierCodeCharacterSet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
+    </Content>
+    <Content Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -27,7 +27,7 @@
     <Copyright>林一怂儿</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.0.3</Version>
+    <Version>2.0.4</Version>
   </PropertyGroup>
 
 
@@ -50,18 +50,18 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <EmbeddedResource Include="YuToolkitStaticFiles\RegionCode.json">
+    <Content Include="YuToolkitStaticFiles\RegionCode.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\RegionCodeUpdateUrl.json">
+    </Content>
+    <Content Include="YuToolkitStaticFiles\RegionCodeUpdateUrl.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
+    </Content>
   </ItemGroup>
 
 

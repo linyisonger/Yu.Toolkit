@@ -20,7 +20,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 

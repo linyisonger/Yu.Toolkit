@@ -15,7 +15,7 @@
     <Description>Generation citizen identification image.</Description>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>1. Generation</PackageReleaseNotes>
-    <Version>2.0.1</Version>
+    <Version>1.0.1</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 

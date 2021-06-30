@@ -15,35 +15,35 @@
     <Description>Generation citizen identification image.</Description>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>1. Generation</PackageReleaseNotes>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="YuToolkitStaticFiles\CitizenIdentificationImageBackTemplateImage.jfif">
+    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationImageBackTemplateImage.jfif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\CitizenIdentificationImageFrontTemplateAvatarPhoto.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationImageFrontTemplateAvatarPhoto.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\CitizenIdentificationImageFrontTemplateImage.jfif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationImageFrontTemplateImage.jfif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\OCR-B 10 BT.ttf">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\OCR-B 10 BT.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
+    </EmbeddedResource>
     <None Include="../juice.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

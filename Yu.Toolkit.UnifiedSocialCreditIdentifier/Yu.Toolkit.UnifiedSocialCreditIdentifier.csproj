@@ -42,18 +42,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierCodeCharacterSet.json">
+    <EmbeddedResource Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierCodeCharacterSet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

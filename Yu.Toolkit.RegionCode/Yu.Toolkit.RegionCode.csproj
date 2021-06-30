@@ -50,18 +50,18 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="YuToolkitStaticFiles\RegionCode.json">
+    <EmbeddedResource Include="YuToolkitStaticFiles\RegionCode.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\RegionCodeUpdateUrl.json">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\RegionCodeUpdateUrl.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
 
 

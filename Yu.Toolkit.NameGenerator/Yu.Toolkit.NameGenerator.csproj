@@ -37,36 +37,36 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt" >
+    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt" >
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
-    <None Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

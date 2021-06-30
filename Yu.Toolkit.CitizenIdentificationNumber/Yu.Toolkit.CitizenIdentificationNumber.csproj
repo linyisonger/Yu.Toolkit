@@ -41,12 +41,12 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="YuToolkitStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
+    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

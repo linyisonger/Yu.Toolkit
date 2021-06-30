@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <Import Project="../Yu.Toolkit.targets" />
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -22,7 +22,7 @@
     </PackageReleaseNotes>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.0.5</Version>
+    <Version>$(Ver)</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
@@ -41,12 +41,12 @@
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="YuToolkitStaticFiles\CitizenIdentificationNumberCodeCharacterSet.json">
+    <None Include="YuToolkitStaticFiles\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
+    </None>
   </ItemGroup>
 
 </Project>

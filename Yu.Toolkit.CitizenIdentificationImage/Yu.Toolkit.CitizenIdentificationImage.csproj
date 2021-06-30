@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <Import Project="../Yu.Toolkit.targets" />
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -15,35 +15,17 @@
     <Description>Generation citizen identification image.</Description>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>1. Generation</PackageReleaseNotes>
-    <Version>2.0.5</Version>
+    <Version>$(Ver)</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationImageBackTemplateImage.jfif">
+    <None Include="YuToolkitStaticFiles\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationImageFrontTemplateAvatarPhoto.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\CitizenIdentificationImageFrontTemplateImage.jfif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YuToolkitStaticFiles\OCR-B 10 BT.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </EmbeddedResource>
+    </None>
     <None Include="../juice.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

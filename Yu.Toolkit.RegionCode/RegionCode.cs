@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -66,15 +67,13 @@ namespace Yu.Toolkit
     /// </summary>
     public static class RegionCode
     {
-        /// <summary>
-        /// 地区代码Json文件的地址
-        /// </summary>
-        public const string RegionCodeJsonFilePath = "YuToolkitStaticFiles/RegionCode.json";
-        /// <summary>
-        /// 更新地区代码地址文件
-        /// </summary>
-        public const string RegionCodeUpdateUrlJsonFilePath = "YuToolkitStaticFiles/RegionCodeUpdateUrl.json";
 
+
+
+        static string _assemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        static string _staticFilesDirectory => _assemblyDirectory + "/YuToolkitStaticFiles/";
+        static string _regionCodeJsonFilePath = _staticFilesDirectory + "RegionCode.json";
+        static string _regionCodeUpdateUrlJsonFilePath = _staticFilesDirectory + "RegionCodeUpdateUrl.json";
 
         static List<RegionDto> _regions = null;
         static List<RegionDto> _provinces = null;
@@ -103,7 +102,7 @@ namespace Yu.Toolkit
         static List<RegionDto> GetRegions()
         {
             _regions = new List<RegionDto>();
-            var json =  File.ReadAllText(RegionCodeJsonFilePath);
+            var json = File.ReadAllText(_regionCodeJsonFilePath);
             _regions = JsonConvert.DeserializeObject<List<RegionDto>>(json);
             return _regions;
         }
@@ -305,7 +304,7 @@ namespace Yu.Toolkit
         /// </summary>
         public static async Task UpdateAsync()
         {
-            var json = File.ReadAllText(RegionCodeUpdateUrlJsonFilePath);
+            var json = File.ReadAllText(_regionCodeUpdateUrlJsonFilePath);
             var regionUpdates = JsonConvert.DeserializeObject<RegionUpdateDto[]>(json);
             var regions = new List<RegionDto>();
             foreach (var regionUpdate in regionUpdates)
@@ -325,7 +324,7 @@ namespace Yu.Toolkit
                     else regions.Add(new RegionDto(code, name, regionUpdate.Year));
                 }
             }
-            File.WriteAllText(RegionCodeJsonFilePath, JsonConvert.SerializeObject(regions));
+            File.WriteAllText(_regionCodeJsonFilePath, JsonConvert.SerializeObject(regions));
         }
 
     }

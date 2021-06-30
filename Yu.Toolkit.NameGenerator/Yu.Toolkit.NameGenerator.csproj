@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <Import Project="../Yu.Toolkit.targets" />
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
     <Authors>linyisonger</Authors>
@@ -19,7 +19,7 @@
     <Copyright>林一怂儿</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.0.5</Version>
+    <Version>$(Ver)</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
@@ -37,36 +37,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorFamilyName.txt">
+    <None Include="YuToolkitStaticFiles\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleDouble.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorFemaleName.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleDouble.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
-    <Content Include="YuToolkitStaticFiles\NameGeneratorMaleName.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
-    </Content>
+    </None>
   </ItemGroup>
-
 </Project>

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace Yu.Toolkit
@@ -98,15 +99,10 @@ namespace Yu.Toolkit
     /// </summary>
     public static class UnifiedSocialCreditIdentifier
     {
-
-        /// <summary>
-        /// 代码字符集配置文件地址
-        /// </summary>
-        public const string CodeCharacterSetJsonFilePath = "YuToolkitStaticFiles/UnifiedSocialCreditIdentifierCodeCharacterSet.json";
-        /// <summary>
-        /// 登记管理部门代码配置文件地址
-        /// </summary>
-        public const string RegistrationManagementDepartmentCodeJsonFilePath = "YuToolkitStaticFiles/UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json";
+        static string _assemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        static string _staticFilesDirectory => _assemblyDirectory + "/YuToolkitStaticFiles/";
+        static string _codeCharacterSetJsonFilePath = _staticFilesDirectory + "UnifiedSocialCreditIdentifierCodeCharacterSet.json";
+        static string _registrationManagementDepartmentCodeJsonFilePath = _staticFilesDirectory + "UnifiedSocialCreditIdentifierRegistrationManagementDepartmentCode.json";
 
         static readonly string[] _defalutOrganizationCodes = new string[] { "91", "92" };
         static readonly string _defalutRegionCode = "410783";
@@ -123,7 +119,7 @@ namespace Yu.Toolkit
         static List<RegistrationManagementDepartmentCodeDto> GetRegistrationManagementDepartmentCodeList()
         {
             _registrationManagementDepartmentCodeList = new List<RegistrationManagementDepartmentCodeDto>();
-            var json = File.ReadAllText(RegistrationManagementDepartmentCodeJsonFilePath);
+            var json = File.ReadAllText(_registrationManagementDepartmentCodeJsonFilePath);
             _registrationManagementDepartmentCodeList = JsonConvert.DeserializeObject<List<RegistrationManagementDepartmentCodeDto>>(json);
             return _registrationManagementDepartmentCodeList;
         }
@@ -139,7 +135,7 @@ namespace Yu.Toolkit
         static List<CodeCharacterSetDto> GetCodeCharacterSetList()
         {
             _codeCharacterSetList = new List<CodeCharacterSetDto>();
-            var json = File.ReadAllText(CodeCharacterSetJsonFilePath);
+            var json = File.ReadAllText(_codeCharacterSetJsonFilePath);
             _codeCharacterSetList = JsonConvert.DeserializeObject<List<CodeCharacterSetDto>>(json);
             return _codeCharacterSetList;
         }
@@ -209,7 +205,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static UnifiedSocialCreditIdentifierDto Parse(string code)
         {
-            CheckOrganizationCode(code.Substring(0,2));
+            CheckOrganizationCode(code.Substring(0, 2));
             Verification(code);
             var departmentCode = code[0].ToString();
             var organizationCode = code[1].ToString();

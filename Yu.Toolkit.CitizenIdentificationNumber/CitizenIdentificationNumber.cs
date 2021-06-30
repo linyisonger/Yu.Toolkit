@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace Yu.Toolkit
@@ -83,10 +84,9 @@ namespace Yu.Toolkit
 
         static readonly string _defalutRegionCode = "410783";
         static readonly string _defalutDateBirth = "19980101";
-        /// <summary>
-        /// 代码字符集配置文件地址
-        /// </summary>
-        public const string CodeCharacterSetJsonFilePath = "YuToolkitStaticFiles/CitizenIdentificationNumberCodeCharacterSet.json";
+        static string _assemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        static string _staticFilesDirectory => _assemblyDirectory + "/YuToolkitStaticFiles/";
+        static string _codeCharacterSetJsonFilePath = _staticFilesDirectory + "CitizenIdentificationNumberCodeCharacterSet.json";
 
         static List<CodeCharacterSetDto> _codeCharacterSetList = null;
         /// <summary>
@@ -100,7 +100,7 @@ namespace Yu.Toolkit
         static List<CodeCharacterSetDto> GetCodeCharacterSetList()
         {
             _codeCharacterSetList = new List<CodeCharacterSetDto>();
-            var json = File.ReadAllText(CodeCharacterSetJsonFilePath);
+            var json = File.ReadAllText(_codeCharacterSetJsonFilePath);
             _codeCharacterSetList = JsonConvert.DeserializeObject<List<CodeCharacterSetDto>>(json);
             return _codeCharacterSetList;
         }

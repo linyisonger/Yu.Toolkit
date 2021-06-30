@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace Yu.Toolkit
 {
@@ -11,9 +13,12 @@ namespace Yu.Toolkit
     /// </summary>
     public static class CitizenIdentificationImage
     {
-        static readonly string frontTemplateImagePath = "YuToolkitStaticFiles/CitizenIdentificationImageFrontTemplateImage.jfif";
-        static readonly string frontTemplateAvatarPhotoPath = "YuToolkitStaticFiles/CitizenIdentificationImageFrontTemplateAvatarPhoto.png";
-        static readonly string backTemplateImagePath = "YuToolkitStaticFiles/CitizenIdentificationImageBackTemplateImage.jfif";
+
+        static string _assemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        static string _staticFilesDirectory => _assemblyDirectory + "/YuToolkitStaticFiles/";
+        static string _frontTemplateImagePath = _staticFilesDirectory + "CitizenIdentificationImageFrontTemplateImage.jfif";
+        static string _frontTemplateAvatarPhotoPath = _staticFilesDirectory + "CitizenIdentificationImageFrontTemplateAvatarPhoto.png";
+        static string _backTemplateImagePath = _staticFilesDirectory + "CitizenIdentificationImageBackTemplateImage.jfif";
 
         static FontFamily _ocr = null;
         /// <summary>
@@ -37,7 +42,7 @@ namespace Yu.Toolkit
         static FontFamily GetOcr()
         {
             var font = new PrivateFontCollection();
-            font.AddFontFile("YuToolkitStaticFiles/OCR-B 10 BT.ttf");
+            font.AddFontFile(_staticFilesDirectory + "OCR-B 10 BT.ttf");
             _ocr = new FontFamily(font.Families[0].Name, font);
             return _ocr;
         }
@@ -94,7 +99,7 @@ namespace Yu.Toolkit
         /// <returns></returns>
         public static Bitmap GengenerateFront(string issuingAuthority, string validPeriod = "")
         {
-            Bitmap bm = new Bitmap(frontTemplateImagePath);
+            Bitmap bm = new Bitmap(_frontTemplateImagePath);
             Graphics gp = Graphics.FromImage(bm);
             gp.DrawString(issuingAuthority, new Font(Black, 13, FontStyle.Regular), SolidBrushBlack, 130, 153);
             gp.DrawString(validPeriod, new Font(WinBlack, 11, FontStyle.Regular), SolidBrushBlack, 130, 178);
@@ -116,7 +121,7 @@ namespace Yu.Toolkit
             var month = citizenIdentificationNumberDto.Birthday.Month.ToString();
             var day = citizenIdentificationNumberDto.Birthday.Day.ToString();
             var gender = citizenIdentificationNumberDto.Gender;
-            Bitmap bm = new Bitmap(backTemplateImagePath);
+            Bitmap bm = new Bitmap(_backTemplateImagePath);
             Graphics gp = Graphics.FromImage(bm);
             gp.DrawString(name, new Font(Black, 13, FontStyle.Regular, GraphicsUnit.Point), SolidBrushBlack, 63, 31.3f);
             gp.DrawString(gender, new Font(Black, 11, FontStyle.Regular), SolidBrushBlack, 63, 58.3f);
@@ -126,7 +131,7 @@ namespace Yu.Toolkit
             gp.DrawString(day, new Font(WinBlack, 11, FontStyle.Regular), SolidBrushBlack, 149.5f, 81.3f, StringFormatCenter);
             gp.DrawString(address, 63, 110, 14, 11, 10, 18, 1.1f, FontStyle.Regular, Black);
             gp.DrawString(citizenIdentificationNumber, 110, 176, 18, 14, 20, 18, -4f, FontStyle.Regular, Ocr);
-            gp.DrawImage(avatarPhoto ?? Image.FromFile(frontTemplateAvatarPhotoPath).RemoveWhiteBackground(), 199, 20, 358 / 3.2f, 441 / 3.2f);
+            gp.DrawImage(avatarPhoto ?? Image.FromFile(_frontTemplateAvatarPhotoPath).RemoveWhiteBackground(), 199, 20, 358 / 3.2f, 441 / 3.2f);
             return bm;
         }
 

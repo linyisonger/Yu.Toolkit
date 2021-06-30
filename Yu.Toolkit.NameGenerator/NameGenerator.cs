@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace Yu.Toolkit
 {
@@ -45,12 +46,14 @@ namespace Yu.Toolkit
     /// </summary>
     public static class NameGenerator
     {
-        
-        private readonly static string _familyNameFileUrl = "YuToolkitStaticFiles/NameGeneratorFamilyName.txt";
-        private readonly static string _maleNameFileUrl = "YuToolkitStaticFiles/NameGeneratorMaleName.txt";
-        private readonly static string _femaleNameFileUrl = "YuToolkitStaticFiles/NameGeneratorFemaleName.txt";
-        private readonly static string _maleDoubleFileUrl = "YuToolkitStaticFiles/NameGeneratorMaleDouble.txt";
-        private readonly static string _femaleDoubleFileUrl = "YuToolkitStaticFiles/NameGeneratorFemaleDouble.txt";
+
+        static string _assemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        static string _staticFilesDirectory => _assemblyDirectory + "/YuToolkitStaticFiles/";
+        static string _familyNameFileUrl = _staticFilesDirectory + "NameGeneratorFamilyName.txt";
+        static string _maleNameFileUrl = _staticFilesDirectory + "NameGeneratorMaleName.txt";
+        static string _femaleNameFileUrl = _staticFilesDirectory + "NameGeneratorFemaleName.txt";
+        static string _maleDoubleFileUrl = _staticFilesDirectory + "NameGeneratorMaleDouble.txt";
+        static string _femaleDoubleFileUrl = _staticFilesDirectory + "NameGeneratorFemaleDouble.txt";
 
         static List<string> _familyName;
         static List<string> _maleName;

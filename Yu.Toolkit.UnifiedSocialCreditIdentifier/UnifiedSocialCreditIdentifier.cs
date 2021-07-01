@@ -147,8 +147,8 @@ namespace Yu.Toolkit
         public static string GetCheckCode(string str)
         {
             str = str.Substring(0, 17);
-            var sum = str.ToCharArray().Select((c, i) => CodeCharacterSetList.First(cv => cv.CharCode == c.ToString()).CharValue * Math.Pow(3, i) % 31).Sum();
-            var cv = 31 - sum % 31;
+            var sum = str.ToCharArray().Select((c, i) => CodeCharacterSetList.First(cv => cv.CharCode == c.ToString()).CharValue * Math.Pow(3, i) % 31).Sum() % 31;
+            var cv = sum == 0 ? 0 : 31 - sum;
             return CodeCharacterSetList.First(ccs => ccs.CharValue == cv)?.CharCode;
         }
         /// <summary>

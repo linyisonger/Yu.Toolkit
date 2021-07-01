@@ -113,7 +113,6 @@ namespace Yu.Toolkit
         static List<RegionDto> GetProvinces()
         {
             _provinces = Regions.Where(r => r.Code.EndsWith("0000")).ToList();
-            System.Console.WriteLine(_provinces.Count);
             return _provinces;
         }
         /// <summary>

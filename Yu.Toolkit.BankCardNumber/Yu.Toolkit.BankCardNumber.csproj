@@ -12,10 +12,7 @@
     <Authors>linyisonger</Authors>
     <Company>linyisonger</Company>
     <Product>Yu.Toolkit</Product>
-    <Description>
-      1. Generation
-      2. Verification.
-    </Description>
+    <Description> Generation bank card number. </Description>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>1. Generation 2. Verification.</PackageReleaseNotes>
     <Version>2.1.8</Version>

@@ -90,7 +90,7 @@ method 方法
 
 ## Yu.Toolkit.BankCardNumber  银行卡号生成与校验
 
- ![](https://img.shields.io/nuget/v/Yu.Toolkit.BankCardNumber?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.BankCardNumber  ?style=for-the-badge)
+ ![](https://img.shields.io/nuget/v/Yu.Toolkit.BankCardNumber?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.BankCardNumber?style=for-the-badge)
 
 method 方法
 

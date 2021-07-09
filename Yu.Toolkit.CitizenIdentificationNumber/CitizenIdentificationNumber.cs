@@ -24,7 +24,7 @@ namespace Yu.Toolkit
         Female = 1 << 1,
     }
     /// <summary>
-    /// 订制报错
+    /// 定制报错
     /// </summary>
     public class CitizenIdentificationNumberException : Exception
     {

@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.CitizenIdentific
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.NameGenerator", "Yu.Toolkit.NameGenerator\Yu.Toolkit.NameGenerator.csproj", "{209D54F8-43E6-4DEC-9CB1-94002A86A2E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.NameGeneratorTest", "Yu.Toolkit.NameGeneratorTest\Yu.Toolkit.NameGeneratorTest.csproj", "{98A064DA-788B-43CD-ACEA-ADC795663B52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.NameGeneratorTest", "Yu.Toolkit.NameGeneratorTest\Yu.Toolkit.NameGeneratorTest.csproj", "{98A064DA-788B-43CD-ACEA-ADC795663B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.BankCardNumber", "Yu.Toolkit.BankCardNumber\Yu.Toolkit.BankCardNumber.csproj", "{D585EF90-0FE0-48B7-941D-94AFA2D3BA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.BankCardNumber.Test", "Yu.Toolkit.BankCardNumber.Test\Yu.Toolkit.BankCardNumber.Test.csproj", "{46898429-A16C-4937-8D92-3E32D35017EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{98A064DA-788B-43CD-ACEA-ADC795663B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A064DA-788B-43CD-ACEA-ADC795663B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A064DA-788B-43CD-ACEA-ADC795663B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D585EF90-0FE0-48B7-941D-94AFA2D3BA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D585EF90-0FE0-48B7-941D-94AFA2D3BA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D585EF90-0FE0-48B7-941D-94AFA2D3BA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D585EF90-0FE0-48B7-941D-94AFA2D3BA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46898429-A16C-4937-8D92-3E32D35017EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46898429-A16C-4937-8D92-3E32D35017EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46898429-A16C-4937-8D92-3E32D35017EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46898429-A16C-4937-8D92-3E32D35017EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

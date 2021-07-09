@@ -86,3 +86,15 @@ method 方法
 
 * ```string Generate(NameGeneratorGenderEnum gender = NameGeneratorGenderEnum.Male | NameGeneratorGenderEnum.Female)``` 生成名字 
 
+
+
+## Yu.Toolkit.BankCardNumber  银行卡号生成与校验
+
+ ![](https://img.shields.io/nuget/v/Yu.Toolkit.BankCardNumber?style=for-the-badge)![](https://img.shields.io/nuget/dt/Yu.Toolkit.BankCardNumber  ?style=for-the-badge)
+
+method 方法
+
+* ```string Generate(string bin = "621210",int length = 18)``` 生成银行卡号
+* ``` string Verification(string code)``` 验证银行卡号
+* ``` string GetCheckCode(string str)``` 获取校验码
+

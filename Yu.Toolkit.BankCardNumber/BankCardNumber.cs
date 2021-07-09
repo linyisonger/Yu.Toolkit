@@ -32,7 +32,7 @@ namespace Yu.Toolkit
                 int n = int.Parse(str[i] + "");
                 sum += (str.Length - 1 - i) % 2 == 0 ? (n * 2) / 10 + (n * 2) % 10 : n;
             }
-            return 10 - sum % 10 + "";
+            return sum % 10 == 0 ? "0" : 10 - sum % 10 + "";
         }
 
         /// <summary>

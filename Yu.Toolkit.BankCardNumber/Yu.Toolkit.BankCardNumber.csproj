@@ -15,7 +15,7 @@
     <Description> Generation bank card number. </Description>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>1. Generation 2. Verification.</PackageReleaseNotes>
-    <Version>2.1.8</Version>
+    <Version>2.1.9</Version>
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 

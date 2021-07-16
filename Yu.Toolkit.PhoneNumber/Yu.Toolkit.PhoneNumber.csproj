@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Yu.Toolkit.targets" />
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>juice.png</PackageIcon>
+    <RepositoryUrl>https://github.com/linyisonger/Yu.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/linyisonger/Yu.Toolkit</PackageProjectUrl>
+    <Copyright>林一怂儿</Copyright>
+    <Authors>linyisonger</Authors>
+    <Company>linyisonger</Company>
+    <Product>Yu.Toolkit</Product>
+    <Description>Generation phone number.</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>1. Generation 2. Verification.</PackageReleaseNotes>
+    <Version>2.1.9</Version>
+    <IncludeContentInPack></IncludeContentInPack>
+  </PropertyGroup>
+  
+  
+  <ItemGroup>
+    <None Include="..\juice.png">
+      <Pack>True</Pack>
+      <PackagePath>.\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="YuToolkitStaticFiles\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>contentFiles\any\any\YuToolkitStaticFiles\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>

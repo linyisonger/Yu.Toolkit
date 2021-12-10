@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.BankCardNumber",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.BankCardNumber.Test", "Yu.Toolkit.BankCardNumber.Test\Yu.Toolkit.BankCardNumber.Test.csproj", "{46898429-A16C-4937-8D92-3E32D35017EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.PhoneNumber", "Yu.Toolkit.PhoneNumber\Yu.Toolkit.PhoneNumber.csproj", "{F8D1F3C6-6EAD-404E-A2A2-4D5E2DDEFD8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.PhoneNumber", "Yu.Toolkit.PhoneNumber\Yu.Toolkit.PhoneNumber.csproj", "{F8D1F3C6-6EAD-404E-A2A2-4D5E2DDEFD8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.PhoneNumber.Test", "Yu.Toolkit.PhoneNumber.Test\Yu.Toolkit.PhoneNumber.Test.csproj", "{245F863A-A5E3-4AF1-BE24-578443B8027F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu.Toolkit.PhoneNumber.Test", "Yu.Toolkit.PhoneNumber.Test\Yu.Toolkit.PhoneNumber.Test.csproj", "{245F863A-A5E3-4AF1-BE24-578443B8027F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu.Toolkit.SocketsManager", "Yu.Toolkit.SocketsManager\Yu.Toolkit.SocketsManager.csproj", "{CB782215-F542-4C95-9B59-84F635A3B84A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{245F863A-A5E3-4AF1-BE24-578443B8027F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245F863A-A5E3-4AF1-BE24-578443B8027F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{245F863A-A5E3-4AF1-BE24-578443B8027F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB782215-F542-4C95-9B59-84F635A3B84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB782215-F542-4C95-9B59-84F635A3B84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB782215-F542-4C95-9B59-84F635A3B84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB782215-F542-4C95-9B59-84F635A3B84A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

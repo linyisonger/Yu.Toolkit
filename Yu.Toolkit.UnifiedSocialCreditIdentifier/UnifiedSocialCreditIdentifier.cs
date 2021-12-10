@@ -139,6 +139,31 @@ namespace Yu.Toolkit
             _codeCharacterSetList = JsonConvert.DeserializeObject<List<CodeCharacterSetDto>>(json);
             return _codeCharacterSetList;
         }
+
+
+        /// <summary>
+        /// 获取组织机构校验码
+        /// </summary>
+        /// <param name="oibcBefore">组织机构代码前半段</param>
+        /// <returns></returns>
+        public static string GetOIBCCheckCode(string oibcBefore)
+        {
+            /** 因数 */
+            var factor = new List<int> { 3, 7, 9, 10, 5, 8, 4, 2 };
+            /** 校验码 */
+            var c9 = 0;
+            for (var i = 0; i < factor.Count; i++)
+            {
+                //把字符串中的字符一个一个的解码
+                var tmp = (byte)oibcBefore[i];
+                if (tmp >= 48 && tmp <= 57) tmp -= 48;
+                else if (tmp >= 65 && tmp <= 90) tmp -= 55;
+                //乘权重后加总
+                c9 += factor[i] * tmp;
+            }
+            c9 = 11 - (c9 % 11);
+            return c9 == 11 ? "0" : c9 == 10 ? "X" : (c9 + "");
+        }
         /// <summary>
         /// 获取校验码
         /// </summary>
@@ -163,6 +188,24 @@ namespace Yu.Toolkit
             var organizationCode = registrationManagementDepartmentCode.OrganizationCodes.FirstOrDefault(o => o.Code == code[1].ToString());
             if (organizationCode == null) throw new UnifiedSocialCreditIdentifierException("Institution code does not exist");
         }
+
+        /// <summary>
+        /// 检查组织机构代码合法性
+        /// </summary>
+        /// <param name="usci">统一社会信用代码</param>
+        public static void CheckOrganizingInstitutionBarCode(string usci)
+        {
+            /** 组织机构代码 */
+            var organizingInstitutionBarCode = usci.Substring(8, 8) + '-' + usci.Substring(16, 1);
+            /** 行政区域代码校验不合格 */
+            if (!Regex.IsMatch(organizingInstitutionBarCode, "^([0-9A-Z]{8}\\-[\\d{1}|X])$")) throw new UnifiedSocialCreditIdentifierException("Does not meet the regular rules");
+            /** 组织机构代码前部分 */
+            var oibcBefore = usci.Substring(8, 8);
+            /** 组织机构代码后部分 */
+            var oibcAfter = usci.Substring(16, 1);
+            // 组织机构代码验证
+            if (GetOIBCCheckCode(oibcBefore) != oibcAfter) throw new UnifiedSocialCreditIdentifierException("Check code error");
+        }
         /// <summary>
         /// 生成统一的社会信用标识符
         /// </summary>
@@ -181,9 +224,11 @@ namespace Yu.Toolkit
             result += organizationCodes[new Random().Next(0, organizationCodes.Length)];
             // 00 XXXXXX 000000000 0   登记管理机关行政区划码
             result += regionCode;
-            // 00 000000 XXXXXXXXX 0  主体标识码(组织机构代码) 
-            for (int i = 0; i < 9; i++)
+            // 00 000000 XXXXXXXX0 0  主体标识码(组织机构代码)  
+            for (int i = 0; i < 8; i++)
                 result += CodeCharacterSetList[new Random().Next(0, CodeCharacterSetList.Count)].CharCode;
+            // 00 000000 00000000X 0   组织机构代码校验码
+            result += GetOIBCCheckCode(result.Substring(8, 8));
             // 00 000000 0000000000 X 校验码 
             result += GetCheckCode(result);
             return result;
@@ -196,8 +241,11 @@ namespace Yu.Toolkit
         {
             if (code.Length != 18) throw new UnifiedSocialCreditIdentifierException("Length must be 18");
             if (!Regex.IsMatch(code, "[0-9A-HJ-NPQRTUWXY]{2}\\d{6}[0-9A-HJ-NPQRTUWXY]{10}")) throw new UnifiedSocialCreditIdentifierException("Does not meet the regular rules");
+            CheckOrganizingInstitutionBarCode(code);
             if (code[17].ToString() != GetCheckCode(code)) throw new UnifiedSocialCreditIdentifierException("Check code error");
         }
+
+
         /// <summary>
         /// 解析内容
         /// </summary>

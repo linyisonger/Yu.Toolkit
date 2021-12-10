@@ -28,5 +28,11 @@ namespace Yu.Toolkit.Test
             Assert.Equal("Check code error", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.Verification("92141100XYWDG8M3BB"); }).Message);
             Assert.Equal("Length must be 18", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.Verification("B23"); }).Message);
         }
+
+        [Fact(DisplayName = "获取组织机构校验码测试")]
+        public void GetOIBCCheckCodeTest()
+        {
+            Assert.True(UnifiedSocialCreditIdentifier.GetOIBCCheckCode("75354615") == "5");
+        }
     }
 }

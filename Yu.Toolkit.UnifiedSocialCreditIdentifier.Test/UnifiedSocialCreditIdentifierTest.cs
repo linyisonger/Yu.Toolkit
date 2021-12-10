@@ -25,7 +25,7 @@ namespace Yu.Toolkit.Test
         public void VerificationTest()
         {
             Assert.Equal("Does not meet the regular rules", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.Verification("AbcDefjHjklmdnOpqr"); }).Message);
-            Assert.Equal("Check code error", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.Verification("92141100XYWDG8M3BB"); }).Message);
+            Assert.Equal("Check code error", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.Verification("92141100XYWDG8M3XB"); }).Message);
             Assert.Equal("Length must be 18", Assert.Throws<UnifiedSocialCreditIdentifierException>(() => { UnifiedSocialCreditIdentifier.Verification("B23"); }).Message);
         }
 

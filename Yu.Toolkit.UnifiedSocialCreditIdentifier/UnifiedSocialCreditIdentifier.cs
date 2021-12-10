@@ -197,6 +197,7 @@ namespace Yu.Toolkit
         {
             /** 组织机构代码 */
             var organizingInstitutionBarCode = usci.Substring(8, 8) + '-' + usci.Substring(16, 1);
+            
             /** 行政区域代码校验不合格 */
             if (!Regex.IsMatch(organizingInstitutionBarCode, "^([0-9A-Z]{8}\\-[\\d{1}|X])$")) throw new UnifiedSocialCreditIdentifierException("Does not meet the regular rules");
             /** 组织机构代码前部分 */

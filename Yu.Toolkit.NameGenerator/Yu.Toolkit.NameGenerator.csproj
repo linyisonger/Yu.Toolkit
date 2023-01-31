@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <Import Project="../Yu.Toolkit.targets" />
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net5.0;netcoreapp3.1;netstandard2.0</TargetFrameworks>
     <Authors>linyisonger</Authors>
     <Product>Yu.Toolkit</Product>
     <PackageIcon>juice.png</PackageIcon>
@@ -19,7 +19,7 @@
     <Copyright>林一怂儿</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.1.8</Version> 
+    <Version>2.1.9</Version> 
     <IncludeContentInPack></IncludeContentInPack>
   </PropertyGroup>
 
